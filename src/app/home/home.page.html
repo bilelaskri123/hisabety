@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>home</ion-title>
+    <ion-buttons slot="end">
+      <ion-button expand="block" fill="clear" (click)="notification()">
+        <ion-icon name="notifications"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides paginationType="bullets" autoplay="1000" loop="true" speed="500" pager="true">
+    <ion-slide *ngFor="let x of imgArray">
+      <img src="{{x}}" onerror="this.src='assets/imgs/no_img.png'" class="sliderimg">
+    </ion-slide>
+  </ion-slides>
+  <ion-searchbar placeholder="search" [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="onInput($event)" (ionCancel)="onCancel($event)">
+  </ion-searchbar>
+
+  <div cards>
+    <div class="grid-full">
+      <ion-row>
+        <ion-col>
+          <ion-card (click)="SubCat('Planning')">
+            <img src="assets/imgs/calender.png" alt="" class="catimg">
+            <h6 class="center margin_t_15">Planning</h6>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card (click)="SubCat('Trajet')">
+            <img src="assets/imgs/trajet.jpeg" alt="" class="catimg">
+            <h6 class="center margin_t_15">Trajet</h6>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card (click)="SubCat('Equipement')">
+            <img src="assets/imgs/material.png" alt="" class="catimg">
+            <h6 class="center margin_t_15">Equipement</h6>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card (click)="SubCat('Tache')">
+            <img src="assets/imgs/tache.png" alt="" class="catimg">
+            <h6 class="center margin_t_15">Tache</h6>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card (click)="SubCat('Paiement')">
+            <img src="assets/imgs/paiement.jpg" alt="" class="catimg">
+            <h6 class="center margin_t_15">Paiement</h6>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card (click)="SubCat('infraction')">
+            <img src="assets/imgs/contravention.png" alt="" class="catimg">
+            <h6 class="center margin_t_15">infraction</h6>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card (click)="SubCat('Sinistre')">
+            <img src="assets/imgs/sinistre.jpeg" alt="" class="catimg">
+            <h6 class="center margin_t_15">Sinistre</h6>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card (click)="SubCat('Kilométrage')">
+            <img src="assets/imgs/kilometrage.png" alt="" class="catimg">
+            <h6 class="center margin_t_15">Kilométrage</h6>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card (click)="SubCat('Essence')">
+            <img src="assets/imgs/essence.jpg" alt="" class="catimg">
+            <h6 class="center margin_t_15">Essence</h6>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+</ion-content>
