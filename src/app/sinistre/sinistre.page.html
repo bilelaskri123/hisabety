@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title> Sinistre</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <form [formGroup]="sinistreForm" (ngSubmit)="submitForm()" novalidate>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Immatriculation</ion-label>
+      <ion-input formControlName="immatriculation" type="text" required></ion-input>
+    </ion-item>
+
+    <ion-text >
+      <p class="error ion-padding" *ngIf="sinistreForm.controls.immatriculation.touched && sinistreForm.controls.immatriculation.errors?.required">
+        Immatriculation is required.
+      </p>
+    </ion-text>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Date</ion-label>
+      <ion-datetime (ionChange)="getDate($event)" formControlName="date" [value]="defaultDate"></ion-datetime>
+    </ion-item>
+
+
+    <ion-item lines="full">
+      <ion-label position="floating">Description</ion-label>
+      <ion-textarea formControlName="description" type="text" rows="6" required></ion-textarea>
+    </ion-item>
+
+    <ion-text >
+      <p class="error ion-padding" *ngIf="sinistreForm.controls.description.touched && sinistreForm.controls.description.errors?.required">
+        Description is required.
+      </p>
+    </ion-text>
+
+    <ion-item lines="full">
+      <ion-input formControlName="photo" type="file" required></ion-input>
+    </ion-item>
+
+    <ion-text >
+      <p class="error ion-padding" *ngIf="sinistreForm.controls.photo.touched && sinistreForm.controls.photo.errors?.required">
+        photo is required.
+      </p>
+    </ion-text>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="secondary" expand="block">Submit</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

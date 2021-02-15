@@ -61,6 +61,26 @@ const routes: Routes = [
   {
     path: 'notifications',
     loadChildren: () => import('./notifications/notifications.module').then( m => m.NotificationsPageModule)
+  },
+  {
+    path: 'trajet',
+    loadChildren: () => import('./trajet/trajet.module').then( m => m.TrajetPageModule)
+  },
+  {
+    path: 'tache',
+    loadChildren: () => import('./tache/tache.module').then( m => m.TachePageModule)
+  },
+  {
+    path: 'paiement',
+    loadChildren: () => import('./paiement/paiement.module').then( m => m.PaiementPageModule)
+  },
+  {
+    path: 'infraction',
+    loadChildren: () => import('./infraction/infraction.module').then( m => m.InfractionPageModule)
+  },
+  {
+    path: 'sinistre',
+    loadChildren: () => import('./sinistre/sinistre.module').then( m => m.SinistrePageModule)
   }
 ];
 @NgModule({
