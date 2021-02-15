@@ -81,6 +81,14 @@ const routes: Routes = [
   {
     path: 'sinistre',
     loadChildren: () => import('./sinistre/sinistre.module').then( m => m.SinistrePageModule)
+  },
+  {
+    path: 'kilometrage',
+    loadChildren: () => import('./kilometrage/kilometrage.module').then( m => m.KilometragePageModule)
+  },
+  {
+    path: 'essence',
+    loadChildren: () => import('./essence/essence.module').then( m => m.EssencePageModule)
   }
 ];
 @NgModule({
