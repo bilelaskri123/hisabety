@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title> Kilometrage</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <form [formGroup]="kiloForm" (ngSubmit)="submitForm()" novalidate>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Immatriculation</ion-label>
+      <ion-input formControlName="immatriculation" type="text" required></ion-input>
+    </ion-item>
+
+    <ion-text >
+      <p class="error ion-padding" *ngIf="kiloForm.controls.immatriculation.touched && kiloForm.controls.immatriculation.errors?.required">
+        Immatriculation is required.
+      </p>
+    </ion-text>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Date</ion-label>
+      <ion-datetime (ionChange)="getDate($event)" formControlName="date" [value]="defaultDate"></ion-datetime>
+    </ion-item>
+
+
+    <ion-item lines="full">
+      <ion-label position="floating">Kilométrage</ion-label>
+      <ion-input formControlName="kilometrage" type="number"  required></ion-input>
+    </ion-item>
+
+    <ion-text >
+      <p class="error ion-padding" *ngIf="kiloForm.controls.kilometrage.touched && kiloForm.controls.kilometrage.errors?.required">
+        kilometrage is required.
+      </p>
+    </ion-text>
+
+    <ion-item lines="full">
+      <ion-input formControlName="photo" type="file" required></ion-input>
+    </ion-item>
+
+    <ion-text >
+      <p class="error ion-padding" *ngIf="kiloForm.controls.photo.touched && kiloForm.controls.photo.errors?.required">
+        photo is required.
+      </p>
+    </ion-text>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="secondary" expand="block">Submit</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
+

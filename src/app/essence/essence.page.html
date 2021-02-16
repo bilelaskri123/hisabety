@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title> Essence</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <form [formGroup]="essenceForm" (ngSubmit)="submitForm()" novalidate>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Carburant</ion-label>
+      <ion-input formControlName="carburant" type="text" required></ion-input>
+    </ion-item>
+
+    <ion-text >
+      <p class="error ion-padding" *ngIf="essenceForm.controls.carburant.touched && essenceForm.controls.carburant.errors?.required">
+        Carburant is required.
+      </p>
+    </ion-text>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Litre</ion-label>
+      <ion-input formControlName="litre" type="number" required ></ion-input>
+    </ion-item>
+
+    <ion-text >
+      <p class="error ion-padding" *ngIf="essenceForm.controls.litre.touched && essenceForm.controls.litre.errors?.required">
+        kilometrage is required.
+      </p>
+    </ion-text>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Prix</ion-label>
+      <ion-input formControlName="prix" type="number"  required></ion-input>
+    </ion-item>
+
+    <ion-text >
+      <p class="error ion-padding" *ngIf="essenceForm.controls.prix.touched && essenceForm.controls.prix.errors?.required">
+        Prix is required.
+      </p>
+    </ion-text>
+
+    <ion-item lines="full">
+      <ion-input formControlName="photo" type="file" required></ion-input>
+    </ion-item>
+
+    <ion-text >
+      <p class="error ion-padding" *ngIf="essenceForm.controls.photo.touched && essenceForm.controls.photo.errors?.required">
+        photo is required.
+      </p>
+    </ion-text>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="secondary" expand="block">Submit</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
+
+
