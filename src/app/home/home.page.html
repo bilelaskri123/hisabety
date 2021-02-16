@@ -22,7 +22,7 @@
     <div class="grid-full">
       <ion-row>
         <ion-col>
-          <ion-card (click)="SubCat('Planning')">
+          <ion-card [routerLink] = "['/planning']">
             <img src="assets/imgs/calender.png" alt="" class="catimg">
             <h6 class="center margin_t_15">Planning</h6>
           </ion-card>
@@ -34,7 +34,7 @@
           </ion-card>
         </ion-col>
         <ion-col>
-          <ion-card (click)="SubCat('Equipement')">
+          <ion-card [routerLink] = "['/equipement']">
             <img src="assets/imgs/material.png" alt="" class="catimg">
             <h6 class="center margin_t_15">Equipement</h6>
           </ion-card>

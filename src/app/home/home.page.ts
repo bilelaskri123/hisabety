@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class HomePage implements OnInit {
   imgArray: any;
+  public myInput;
+  public shouldShowCancel;
 
   constructor( private router: Router) {
     this.imgArray = ['assets/imgs/camion2.jpeg']
@@ -26,5 +28,13 @@ export class HomePage implements OnInit {
   }
   notification(){
     this.router.navigateByUrl('/notifications');
+  }
+
+  onInput(event) {
+
+  }
+
+  onCancel(event) {
+    
   }
 }

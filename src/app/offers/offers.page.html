@@ -1,23 +1,37 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>offers</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Docs</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="cloud-upload-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
-  <ion-row>
-    <ion-col size="10" class="vertical_centrC">
-      <!-- <ion-input placeholder="Enter Voucher Code"></ion-input> -->
-      <ion-searchbar></ion-searchbar>
-    </ion-col>
-    <ion-col size="2" class="vertical_centr">
-      <ion-icon name="funnel-outline" class="font_25"></ion-icon>
-    </ion-col>
-  </ion-row>
 </ion-header>
 
 <ion-content>
-  <img src="assets/imgs/o1.png" class="offerimg" alt="">
-  <img src="assets/imgs/o2.png" class="offerimg" alt="">
-  <img src="assets/imgs/o3.png" class="offerimg" alt="">
-  <img src="assets/imgs/o4.png" class="offerimg" alt="">
-  <img src="assets/imgs/o5.png" class="offerimg" alt="">
-  <br>
+
+  <ion-item-sliding *ngFor="let x of [1,2,3,4,5,6,7,8]; ">
+    <ion-item>
+      
+        <ion-icon name="document-outline"></ion-icon>
+      
+      <ion-label>
+        <h2>document</h2>
+      </ion-label>
+      <ion-button slot="end" color="light">
+        <ion-icon name="cloud-download-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item-options side="end">
+      <ion-item-option color="danger">
+        <ion-icon slot="icon-only" name="trash"></ion-icon>
+      </ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
 </ion-content>

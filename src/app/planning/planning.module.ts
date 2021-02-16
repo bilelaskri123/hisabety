@@ -6,13 +6,14 @@ import { IonicModule } from '@ionic/angular';
 
 import { PlanningPageRoutingModule } from './planning-routing.module';
 
+import { PlanningPage } from './planning.page';
+
+import { NgCalendarModule  } from 'ionic2-calendar';
 import { CalModalPageModule } from '../cal-modal/cal-modal.module';
- 
+
 import { registerLocaleData } from '@angular/common';
 import localeDe from '@angular/common/locales/de';
 registerLocaleData(localeDe);
-
-import { PlanningPage } from './planning.page';
 
 @NgModule({
   imports: [
@@ -20,10 +21,11 @@ import { PlanningPage } from './planning.page';
     FormsModule,
     IonicModule,
     PlanningPageRoutingModule,
+    NgCalendarModule,
     CalModalPageModule
   ],
   declarations: [PlanningPage],
-  providers: [
+  providers : [
     { provide: LOCALE_ID, useValue: 'de-DE' }
   ]
 })

@@ -1,6 +1,9 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>QrCode</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Equipement</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -11,7 +14,8 @@
     </ion-slide>
   </ion-slides>
 
-  <!-- <ion-segment [(ngModel)]="Types" color="primary">
+<!-- 
+  <ion-segment [(ngModel)]="Types" color="primary">
     <ion-segment-button value="1">
       Clinics
     </ion-segment-button>
@@ -21,21 +25,21 @@
   </ion-segment> -->
 
 
+  <ion-searchbar placeholder="search" [(ngModel)]="myInput"
+    [showCancelButton]="shouldShowCancel" (ionInput)="onInput($event)" (ionCancel)="onCancel($event)">
+  </ion-searchbar>
 
-  <!-- <div [ngSwitch]="Types">
+  <div [ngSwitch]="Types">
     <ion-list *ngSwitchCase="'1'">
-      <ion-row class="mainRow" (click)="myFunction('1a')">
-        <ion-col size="2" class="vertical_centr"><img src="assets/imgs/1.png" alt="" class="catimg"></ion-col>
-        <ion-col size="7" class="font_20 vertical_centrC">Dedicated eye clinics</ion-col>
-        <ion-col size="1" class="vertical_centr">
-          <ion-icon name="close-outline" class="font_25 colorred"></ion-icon>
-        </ion-col>
+      <ion-row class="mainRow" (click)="myFunction('1z')">
+        <ion-col size="2" class="vertical_centr"><img src="assets/imgs/equipement.jpeg" alt="" class="catimg"></ion-col>
+        <ion-col size="8" class="font_20 vertical_centrC">liste 1</ion-col>
         <ion-col size="2" class="vertical_centr">
           <ion-icon name="chevron-down-outline" class="font_25"></ion-icon>
         </ion-col>
       </ion-row>
-      <div id="1a" class="notDisplay mainRow">
-        <ion-button shape="round" fill="outline" class="dbtn">Doctors</ion-button>
+      <div id="1z" class="notDisplay mainRow">
+        <ion-button shape="round" fill="outline" class="dbtn">liste 1</ion-button>
         <table class="tablearrange">
           <tbody>
             <tr>
@@ -90,22 +94,18 @@
         </ion-item>
 
         <br>
-        <ion-button shape="round" class="btn" (click)="booking('Dedicated eye clinics')">Book</ion-button><br>
+        <!-- <ion-button shape="round" class="btn" (click)="booking('Dedicated eye clinics')">Book</ion-button><br> -->
       </div>
 
-      <ion-row class="mainRow" (click)="myFunction('2a')">
-        <ion-col size="2" class="vertical_centr"><img src="assets/imgs/2.png" alt="" class="catimg"></ion-col>
-        <ion-col size="7" class="font_20 vertical_centrC">Private eye clinics</ion-col>
-        <ion-col size="1" class="vertical_centr">
-          <ion-icon name="close-outline" class="font_25 colorred"></ion-icon>
-        </ion-col>
-
+      <ion-row class="mainRow" (click)="myFunction('2z')">
+        <ion-col size="2" class="vertical_centr"><img src="assets/imgs/equipement.jpeg" alt="" class="catimg"></ion-col>
+        <ion-col size="8" class="font_20 vertical_centrC">liste 1</ion-col>
         <ion-col size="2" class="vertical_centr">
           <ion-icon name="chevron-down-outline" class="font_25"></ion-icon>
         </ion-col>
       </ion-row>
-      <div id="2a" class="notDisplay mainRow">
-        <ion-button shape="round" fill="outline" class="dbtn">Doctors</ion-button>
+      <div id="2z" class="notDisplay mainRow">
+        <ion-button shape="round" fill="outline" class="dbtn">liste 1</ion-button>
         <table class="tablearrange">
           <tbody>
             <tr>
@@ -160,22 +160,18 @@
         </ion-item>
 
         <br>
-        <ion-button shape="round" class="btn" (click)="booking('Private eye clinics')">Book</ion-button><br>
+        <!-- <ion-button shape="round" class="btn" (click)="booking('Private eye clinics')">Book</ion-button><br> -->
       </div>
 
-      <ion-row class="mainRow" (click)="myFunction('3a')">
-        <ion-col size="2" class="vertical_centr"><img src="assets/imgs/3.png" alt="" class="catimg"></ion-col>
-        <ion-col size="7" class="font_20 vertical_centrC">Elite clinic doctors</ion-col>
-        <ion-col size="1" class="vertical_centr">
-          <ion-icon name="close-outline" class="font_25 colorred"></ion-icon>
-        </ion-col>
-
+      <ion-row class="mainRow" (click)="myFunction('3z')">
+        <ion-col size="2" class="vertical_centr"><img src="assets/imgs/equipement.jpeg" alt="" class="catimg"></ion-col>
+        <ion-col size="8" class="font_20 vertical_centrC"> liste 3</ion-col>
         <ion-col size="2" class="vertical_centr">
           <ion-icon name="chevron-down-outline" class="font_25"></ion-icon>
         </ion-col>
       </ion-row>
-      <div id="3a" class="notDisplay mainRow">
-        <ion-button shape="round" fill="outline" class="dbtn">Doctors</ion-button>
+      <div id="3z" class="notDisplay mainRow">
+        <ion-button shape="round" fill="outline" class="dbtn">liste 3</ion-button>
         <table class="tablearrange">
           <tbody>
             <tr>
@@ -230,22 +226,18 @@
         </ion-item>
 
         <br>
-        <ion-button shape="round" class="btn" (click)="booking('Elite clinic doctors')">Book</ion-button><br>
+        <!-- <ion-button shape="round" class="btn" (click)="booking('Elite clinic doctors')">Book</ion-button><br> -->
       </div>
 
-      <ion-row class="mainRow" (click)="myFunction('4a')">
-        <ion-col size="2" class="vertical_centr"><img src="assets/imgs/4.png" alt="" class="catimg"></ion-col>
-        <ion-col size="7" class="font_20 vertical_centrC">Eye care clinics</ion-col>
-        <ion-col size="1" class="vertical_centr">
-          <ion-icon name="close-outline" class="font_25 colorred"></ion-icon>
-        </ion-col>
-
+      <ion-row class="mainRow" (click)="myFunction('4z')">
+        <ion-col size="2" class="vertical_centr"><img src="assets/imgs/equipement.jpeg" alt="" class="catimg"></ion-col>
+        <ion-col size="8" class="font_20 vertical_centrC"> liste 4</ion-col>
         <ion-col size="2" class="vertical_centr">
           <ion-icon name="chevron-down-outline" class="font_25"></ion-icon>
         </ion-col>
       </ion-row>
-      <div id="4a" class="notDisplay mainRow">
-        <ion-button shape="round" fill="outline" class="dbtn">Doctors</ion-button>
+      <div id="4z" class="notDisplay mainRow">
+        <ion-button shape="round" fill="outline" class="dbtn">liste 4</ion-button>
         <table class="tablearrange">
           <tbody>
             <tr>
@@ -300,7 +292,7 @@
         </ion-item>
 
         <br>
-        <ion-button shape="round" class="btn" (click)="booking('Eye care clinics')">Book</ion-button><br>
+        <!-- <ion-button shape="round" class="btn" (click)="booking('Eye care clinics')">Book</ion-button><br> -->
       </div>
     </ion-list>
 
@@ -312,21 +304,21 @@
 
 
     <ion-list *ngSwitchCase="'2'">
-      <ion-row class="mainRow" (click)="myFunction('1b')">
+      <ion-row class="mainRow" (click)="myFunction('1x')">
         <ion-col size="2" class="vertical_centr"><img src="assets/imgs/boy.png" alt="" class="catimg"></ion-col>
-        <ion-col size="8" class="font_20 vertical_centrC">Doctor Hamdy ibrahim</ion-col> 
+        <!-- <ion-col size="8" class="font_20 vertical_centrC">Doctor Hamdy ibrahim</ion-col> -->
         <ion-col size="7" class="font_20 ">
           <div>Doctor Hamdy ibrahim</div>
           <div><small>Eye specialist</small></div>
         </ion-col>
         <ion-col size="1" class="vertical_centr">
-          <ion-icon name="close-outline" class="font_25 colorred"></ion-icon>
+          <ion-icon name="heart-outline" class="font_25"></ion-icon>
         </ion-col>
         <ion-col size="2" class="vertical_centr">
           <ion-icon name="chevron-down-outline" class="font_25"></ion-icon>
         </ion-col>
       </ion-row>
-      <div id="1b" class="notDisplay mainRow">
+      <div id="1x" class="notDisplay mainRow">
         <ion-button shape="round" fill="outline" class="dbtn">clinics</ion-button>
         <table class="tablearrange">
           <tbody>
@@ -384,20 +376,20 @@
         <ion-button shape="round" class="btn" (click)="booking('Doctor Hamdy ibrahim')">Book</ion-button><br>
       </div>
 
-      <ion-row class="mainRow" (click)="myFunction('2b')">
+      <ion-row class="mainRow" (click)="myFunction('2x')">
         <ion-col size="2" class="vertical_centr"><img src="assets/imgs/boy.png" alt="" class="catimg"></ion-col>
         <ion-col size="7" class="font_20 ">
           <div>Dr. Chirag pathak</div>
           <div><small>Dental specialist</small></div>
         </ion-col>
         <ion-col size="1" class="vertical_centr">
-          <ion-icon name="close-outline" class="font_25 colorred"></ion-icon>
+          <ion-icon name="heart-outline" class="font_25"></ion-icon>
         </ion-col>
         <ion-col size="2" class="vertical_centr">
           <ion-icon name="chevron-down-outline" class="font_25"></ion-icon>
         </ion-col>
       </ion-row>
-      <div id="2b" class="notDisplay mainRow">
+      <div id="2x" class="notDisplay mainRow">
         <ion-button shape="round" fill="outline" class="dbtn">clinics</ion-button>
         <table class="tablearrange">
           <tbody>
@@ -456,22 +448,22 @@
         <ion-button shape="round" class="btn" (click)="booking('Dr. Chirag pathak')">Book</ion-button><br>
       </div>
 
-      <ion-row class="mainRow" (click)="myFunction('3b')">
+      <ion-row class="mainRow" (click)="myFunction('3x')">
         <ion-col size="2" class="vertical_centr"><img src="assets/imgs/boy.png" alt="" class="catimg"></ion-col>
-         <ion-col size="8" class="font_20 vertical_centrC">Dr Vikas Desai</ion-col> 
+        <!-- <ion-col size="8" class="font_20 vertical_centrC">Dr Vikas Desai</ion-col> -->
         <ion-col size="7" class="font_20 ">
           <div>Dr Vikas Desai</div>
           <div><small>Surgen</small></div>
         </ion-col>
         <ion-col size="1" class="vertical_centr">
-          <ion-icon name="close-outline" class="font_25 colorred"></ion-icon>
+          <ion-icon name="heart-outline" class="font_25"></ion-icon>
         </ion-col>
 
         <ion-col size="2" class="vertical_centr">
           <ion-icon name="chevron-down-outline" class="font_25"></ion-icon>
         </ion-col>
       </ion-row>
-      <div id="3b" class="notDisplay mainRow">
+      <div id="3x" class="notDisplay mainRow">
         <ion-button shape="round" fill="outline" class="dbtn">clinics</ion-button>
         <table class="tablearrange">
           <tbody>
@@ -530,22 +522,22 @@
 
       </div>
 
-      <ion-row class="mainRow" (click)="myFunction('4b')">
+      <ion-row class="mainRow" (click)="myFunction('4x')">
         <ion-col size="2" class="vertical_centr"><img src="assets/imgs/boy.png" alt="" class="catimg"></ion-col>
-        <ion-col size="8" class="font_20 vertical_centrC">Dr. Shruti Sharma</ion-col>
+        <!-- <ion-col size="8" class="font_20 vertical_centrC">Dr. Shruti Sharma</ion-col> -->
         <ion-col size="7" class="font_20 ">
           <div>Dr. Shruti Sharma</div>
           <div><small>Skin specialist</small></div>
         </ion-col>
         <ion-col size="1" class="vertical_centr">
-          <ion-icon name="close-outline" class="font_25 colorred"></ion-icon>
+          <ion-icon name="heart-outline" class="font_25"></ion-icon>
         </ion-col>
 
         <ion-col size="2" class="vertical_centr">
           <ion-icon name="chevron-down-outline" class="font_25"></ion-icon>
         </ion-col>
       </ion-row>
-      <div id="4b" class="notDisplay mainRow">
+      <div id="4x" class="notDisplay mainRow">
         <ion-button shape="round" fill="outline" class="dbtn">clinics</ion-button>
         <table class="tablearrange">
           <tbody>
@@ -604,5 +596,7 @@
 
       </div>
     </ion-list>
-  </div> -->
+  </div>
+
+
 </ion-content>

@@ -13,7 +13,7 @@ export class FavouritePage implements OnInit {
   myRating: number;
 
   constructor( private route: ActivatedRoute, private router: Router ) {
-    this.imgArray = ['assets/imgs/camion2.jpeg'];
+    this.imgArray = ['assets/imgs/qrcode.png'];
     this.Types = 1
     this.myRating = 4
    }
@@ -27,6 +27,9 @@ export class FavouritePage implements OnInit {
       $(document).ready(function () {
         $(x).slideToggle('slow');
       });
+  }
+  rating(number) {
+    
   }
   
   booking(name){

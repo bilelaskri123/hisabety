@@ -27,7 +27,7 @@ export class BookPage implements OnInit {
       this.pagename = params.name
     })
   }
-  rating(){
+  rating(number){
 
   }
 

@@ -10,6 +10,9 @@ export class SubCategoryPage implements OnInit {
   pagename: any;
   imgArray: string[];
 
+  public myInput;
+  public shouldShowCancel;
+
   constructor( private route: ActivatedRoute, private router: Router ) {
     this.imgArray = ['assets/imgs/camion2.jpeg']
   }
@@ -29,5 +32,13 @@ export class SubCategoryPage implements OnInit {
   }
   notification() {
     this.router.navigateByUrl('/notifications');
+  }
+
+  onInput(event) {
+
+  }
+
+  onCancel(event) {
+    
   }
 }

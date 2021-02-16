@@ -89,11 +89,19 @@ const routes: Routes = [
   {
     path: 'essence',
     loadChildren: () => import('./essence/essence.module').then( m => m.EssencePageModule)
+  },
+  {
+    path: 'planning',
+    loadChildren: () => import('./planning/planning.module').then( m => m.PlanningPageModule)
+  },
+  {
+    path: 'equipement',
+    loadChildren: () => import('./equipement/equipement.module').then( m => m.EquipementPageModule)
   }
 ];
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules, relativeLinkResolution: 'legacy' })
   ],
   exports: [RouterModule]
 })
