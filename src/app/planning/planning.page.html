@@ -32,11 +32,8 @@
             </ion-list-header>
             <ion-item>
               <ion-label>المخزن</ion-label>
-              <ion-select value="brown" okText="موافق" cancelText="إلغاء">
-                <ion-select-option value="brown">المخزن الرئيسي </ion-select-option>
-                <ion-select-option value="blonde">مخزن الشرق</ion-select-option>
-                <ion-select-option value="black">مخزن طرابلس</ion-select-option>
-                <ion-select-option value="red">مخزن مصراتة </ion-select-option>
+              <ion-select value="0" okText="موافق" cancelText="إلغاء" >
+                <ion-select-option *ngFor="let depot of depots"  value={{depot.id}}  (click)="onSelectChange(1)"> {{depot.name}} </ion-select-option>
               </ion-select>
             </ion-item>
 
@@ -67,22 +64,22 @@
         </ion-grid>
       </ion-col>
 
-      <ion-col size="12" class="array">
-        <ion-grid>
+      <ion-col size="12" class="array" >
+        <ion-grid *ngFor="let product of products" >
               <ion-row>
                 <ion-col>
                   <div>
-                    155
+                    {{product.quantity}}
                   </div>
                 </ion-col>
                 <ion-col>
                   <div>
-                    2
+                     {{product.piece_numbers}}
                   </div>
                 </ion-col>
                 <ion-col>
-                  <div>
-                   زيتون
+                  <div class="name">
+                    {{product.name}}
                   </div>
                 </ion-col>
               </ion-row>
