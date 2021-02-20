@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>home</ion-title>
+    <ion-title>الرئيسية </ion-title>
     <ion-buttons slot="end">
       <ion-button expand="block" fill="clear" (click)="notification()">
         <ion-icon name="notifications"></ion-icon>
@@ -10,69 +10,46 @@
 </ion-header>
 
 <ion-content>
-  <ion-slides paginationType="bullets" autoplay="1000" loop="true" speed="500" pager="true">
-    <ion-slide *ngFor="let x of imgArray">
-      <img src="{{x}}" onerror="this.src='assets/imgs/no_img.png'" class="sliderimg">
-    </ion-slide>
-  </ion-slides>
-  <ion-searchbar placeholder="search" [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="onInput($event)" (ionCancel)="onCancel($event)">
+  <ion-searchbar placeholder="البحث " [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="onInput($event)" (ionCancel)="onCancel($event)">
   </ion-searchbar>
 
   <div cards>
     <div class="grid-full">
       <ion-row>
-        <ion-col>
+        <ion-col size="6" >
           <ion-card [routerLink] = "['/planning']">
-            <img src="assets/imgs/calender.png" alt="" class="catimg">
-            <h6 class="center margin_t_15">Planning</h6>
+            <img src="assets/imgs/stock.png" alt="" class="catimg">
+            <h6 class="center margin_t_15">متابعة المخزون </h6>
           </ion-card>
         </ion-col>
-        <ion-col>
+        <ion-col size="6" >
           <ion-card [routerLink] = "['/trajet']">
-            <img src="assets/imgs/trajet.jpeg" alt="" class="catimg">
-            <h6 class="center margin_t_15">Trajet</h6>
+            <img src="assets/imgs/writer.jpg" alt="" class="catimg">
+            <h6 class="center margin_t_15">حركة صنف </h6>
           </ion-card>
         </ion-col>
-        <ion-col>
-          <ion-card [routerLink] = "['/equipement']">
-            <img src="assets/imgs/material.png" alt="" class="catimg">
-            <h6 class="center margin_t_15">Equipement</h6>
-          </ion-card>
-        </ion-col>
-        <ion-col>
-          <ion-card [routerLink] = "['/tache']">
-            <img src="assets/imgs/tache.png" alt="" class="catimg">
-            <h6 class="center margin_t_15">Tache</h6>
-          </ion-card>
-        </ion-col>
-        <ion-col>
+        <ion-col size="6">
           <ion-card [routerLink] = "['/paiement']">
-            <img src="assets/imgs/paiement.jpg" alt="" class="catimg">
-            <h6 class="center margin_t_15">Paiement</h6>
+            <img src="assets/imgs/vente.jpg" alt="" class="catimg">
+            <h6 class="center margin_t_15">حركة مبيعات </h6>
           </ion-card>
         </ion-col>
-        <ion-col>
+        <ion-col size="6">
           <ion-card [routerLink] = "['/infraction']">
-            <img src="assets/imgs/contravention.png" alt="" class="catimg">
-            <h6 class="center margin_t_15">infraction</h6>
+            <img src="assets/imgs/compte.jpg" alt="" class="catimg">
+            <h6 class="center margin_t_15">أرصدة العملاء </h6>
           </ion-card>
         </ion-col>
-        <ion-col>
+        <ion-col size="6">
           <ion-card [routerLink] = "['/sinistre']">
-            <img src="assets/imgs/sinistre.jpeg" alt="" class="catimg">
-            <h6 class="center margin_t_15">Sinistre</h6>
+            <img src="assets/imgs/coffre.jpg" alt="" class="catimg">
+            <h6 class="center margin_t_15">حركة خزينة </h6>
           </ion-card>
         </ion-col>
-        <ion-col>
+        <ion-col size="6">
           <ion-card [routerLink] = "['/kilometrage']">
-            <img src="assets/imgs/kilometrage.png" alt="" class="catimg">
-            <h6 class="center margin_t_15">Kilométrage</h6>
-          </ion-card>
-        </ion-col>
-        <ion-col>
-          <ion-card [routerLink] = "['/essence']">
-            <img src="assets/imgs/essence.jpg" alt="" class="catimg">
-            <h6 class="center margin_t_15">Essence</h6>
+            <img src="assets/imgs/bank.jpg" alt="" class="catimg">
+            <h6 class="center margin_t_15">أرصدة المصارف </h6>
           </ion-card>
         </ion-col>
       </ion-row>
