@@ -97,7 +97,9 @@ export class PlanningPage implements OnInit {
       ]
     }
   ];
-
+  depot = {
+    id: 0
+  };
   products= [];
   depots= [];
   eventSource = [];
@@ -262,8 +264,25 @@ export class PlanningPage implements OnInit {
       }
     });
   }
+public onChangeProduct(searchedProduct: string) {
+  console.log(searchedProduct);
+  let list =[];
+  this.products.map( (product) => {
+    if(product.name === searchedProduct ) {
+      console.log(searchedProduct);
+      list.push(product);
+    }
+  });
+  this.products = list;
+}
 
-  onSelectChange(event: number) {
-    console.log(event);
+
+public onSelectChange(id: number) {
+    console.log(id);
+    this.products=[];
+    let stock =this.stocks[id-1];
+    stock.products.map((product) => {
+      this.products.push(product);
+    });
   }
 }

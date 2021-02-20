@@ -17,22 +17,17 @@
 <ion-content>
   <ion-row>
     <ion-col size="12">
-     <ion-searchbar placeholder="البحث " >
+     <ion-searchbar placeholder="البحث "   (search)='onChangeProduct($event.target.value)'>
       </ion-searchbar>
     </ion-col>
   </ion-row>
 
   <ion-row>
-    <ion-col>
-        <ion-list>
-            <ion-list-header>
-              <ion-label>
-                قائمة المخازن
-              </ion-label>
-            </ion-list-header>
+      <ion-col size="12">
+      <ion-list>
             <ion-item>
-              <ion-label>المخزن</ion-label>
-              <ion-select value="0" okText="موافق" cancelText="إلغاء" >
+              <ion-label>المخازن</ion-label>
+              <ion-select [(ngModel)]="depot.id"  okText="موافق" cancelText="إلغاء"  (ionChange)="onSelectChange(depot.id)">
                 <ion-select-option *ngFor="let depot of depots"  value={{depot.id}}  (click)="onSelectChange(1)"> {{depot.name}} </ion-select-option>
               </ion-select>
             </ion-item>
