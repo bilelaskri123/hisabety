@@ -11,46 +11,149 @@ import { CalModalPage } from '../cal-modal/cal-modal.page';
 })
 export class PlanningPage implements OnInit {
 
+  stocks = [
+    {
+      id:1,
+      name: "المخزن الرئيسي ",
+      products: [
+        {
+          name: "زيتون",
+          quantity: "100",
+          piece_numbers:"10"
+        },
+        {
+          name: "أرز",
+          quantity: "1000",
+          piece_numbers:"2"
+        },
+        {
+          name: "فول",
+          quantity: "500",
+          piece_numbers:"3"
+        }
+      ]
+    },
+    {
+      id:2,
+      name: "مخزن الشرق",
+      products: [
+        {
+          name: "دجاج",
+          quantity: "180",
+          piece_numbers:"5"
+        },
+        {
+          name: "ابقار",
+          quantity: "20",
+          piece_numbers:"3"
+        },
+        {
+          name: "علوش",
+          quantity: "100",
+          piece_numbers:"5"
+        }
+      ]
+    },
+    {
+      id:3,
+      name: "مخزن طرابلس",
+      products: [
+        {
+          name: "أسماك",
+          quantity: "450",
+          piece_numbers:"3"
+        },
+        {
+          name: "أسماك معلبة",
+          quantity: "3000",
+          piece_numbers:"2"
+        },
+        {
+          name: "أسماك جودة عالية",
+          quantity: "8",
+          piece_numbers:"2"
+        }
+      ]
+    },
+    {
+      id:4,
+      name: "مخزن مصراتة",
+      products: [
+        {
+          name: "حليب",
+          quantity: "2000",
+          piece_numbers:"5"
+        },
+        {
+          name: "البان",
+          quantity: "1000",
+          piece_numbers:"3"
+        },
+        {
+          name: "زبادي",
+          quantity: "500",
+          piece_numbers:"10"
+        }
+      ]
+    }
+  ];
+
+  products= [];
+  depots= [];
   eventSource = [];
   viewTitle: string;
- 
+
   calendar = {
     mode: 'month',
     currentDate: new Date(),
   };
- 
+
   selectedDate: Date;
- 
+
   @ViewChild(CalendarComponent) myCal: CalendarComponent;
- 
+
   constructor(
     private alertCtrl: AlertController,
     @Inject(LOCALE_ID) private locale: string,
     private modalCtrl: ModalController
   ) {}
- 
-  ngOnInit() {}
- 
+
+  ngOnInit() {
+      this.stocks.map((stock) => {
+
+      stock.products.map((product) => {
+          this.products.push(product);
+        });
+        console.log('------ depots -----', this.products);
+        let depot ={
+          id: stock.id,
+          name: stock.name
+        };
+      this.depots.push(depot);
+      });
+      console.log('------ depots -----',this.depots);
+  }
+
   // Change current month/week/day
   next() {
     this.myCal.slideNext();
   }
- 
+
   back() {
     this.myCal.slidePrev();
   }
- 
+
   // Selected date reange and hence title changed
   onViewTitleChanged(title) {
     this.viewTitle = title;
   }
- 
+
   // Calendar event was clicked
   async onEventSelected(event) {
     // Use Angular date pipe for conversion
     let start = formatDate(event.startTime, 'medium', this.locale);
     let end = formatDate(event.endTime, 'medium', this.locale);
- 
+
     const alert = await this.alertCtrl.create({
       header: event.title,
       subHeader: event.desc,
@@ -59,7 +162,7 @@ export class PlanningPage implements OnInit {
     });
     alert.present();
   }
- 
+
   createRandomEvents() {
     var events = [];
     for (var i = 0; i < 50; i += 1) {
@@ -120,7 +223,7 @@ export class PlanningPage implements OnInit {
     }
     this.eventSource = events;
   }
- 
+
   removeEvents() {
     this.eventSource = [];
   }
@@ -131,9 +234,9 @@ export class PlanningPage implements OnInit {
       cssClass: 'cal-modal',
       backdropDismiss: false
     });
-   
+
     await modal.present();
-   
+
     modal.onDidDismiss().then((result) => {
       if (result.data && result.data.event) {
         let event = result.data.event;
@@ -160,5 +263,7 @@ export class PlanningPage implements OnInit {
     });
   }
 
-
+  onSelectChange(event: number) {
+    console.log(event);
+  }
 }
