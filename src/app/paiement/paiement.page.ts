@@ -60,4 +60,8 @@ export class PaiementPage implements OnInit {
     console.log(event.target.value);
   }
 
+  async openCalModal() {
+   
+  }
+
 }
