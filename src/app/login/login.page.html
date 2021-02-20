@@ -2,24 +2,25 @@
   <div class="medialogin">
     <br>
     <br>
-    <img src="assets/imgs/camion-logo.png" class="logoImg" alt="">
-    <h1 class="center">Welcome</h1>
+    <img src="assets/imgs/login.png" class="logoImg" alt="">
+    <h1 class="center">مرحبا</h1>
     <div style="position: relative">
+      <input type="text" placeholder="إسم المستخدم" class="valueInput" [(ngModel)]="loginData.email"/>
       <div class="inputImg vertical_centr">
-        <img src="assets/imgs/user.png" alt="" width="20px">
+        <img src="assets/imgs/user2.png" alt="" width="20px">
       </div>
-      <input type="text" placeholder="Email/Phone number" class="valueInput" [(ngModel)]="loginData.email">
     </div>
     <div style="position: relative">
+      <input type="password" placeholder="كلمة المرور" class="valueInput" [(ngModel)]="loginData.password">
+      
       <div class="inputImg vertical_centr">
-        <img src="assets/imgs/password.png" alt="" width="20px">
+        <img src="assets/imgs/password3.png" alt="" width="20px">
       </div>
-      <input type="password" placeholder="Password" class="valueInput" [(ngModel)]="loginData.password">
     </div>
-    <div class="forgot" (click)="forgotpassword()">Forgot Password?</div>
+    <div class="forgot" (click)="forgotpassword()">هل نسيت كلمة السر؟</div>
     <br>
     <br>
-    <button ion-button class="signinBtn" (click)="home()">Log In</button>
+    <button ion-button class="signinBtn" (click)="home()">تسجيل الدخول</button>
     <br>
     <br>
 
@@ -29,7 +30,7 @@
     </ion-row> -->
     <br>
     <br>
-    <div class="create" (click)="signup()">Create new account? &nbsp;<span class="spancreate">Sign up</span>
+    <div class="create" (click)="signup()">إضافة حساب جديد؟ &nbsp;<span class="spancreate">إضافة</span>
     </div>
   </div>
 </ion-content>
