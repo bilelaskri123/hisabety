@@ -43,13 +43,50 @@
       </ion-list>
     </ion-col>
   </ion-row>
-  <ng-template #template let-view="view" let-row="row" let-col="col">
-    <div [class.with-event]="view.dates[row*7+col].events.length">
-      {{view.dates[row*7+col].label}}
-      <div class="indicator-container">
-        <div class="event-indicator" *ngFor="let e of view.dates[row*7+col].events"></div>
-      </div>
-    </div>
-  </ng-template>
 
+  <ion-row >
+      <ion-col size="12" class="array">
+        <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <div>
+                    الكمية
+                  </div>
+                </ion-col>
+                <ion-col>
+                  <div>
+                   رقم القطعة
+                  </div>
+                </ion-col>
+                <ion-col>
+                  <div>
+                    رقم الصنف
+                  </div>
+                </ion-col>
+              </ion-row>
+        </ion-grid>
+      </ion-col>
+
+      <ion-col size="12" class="array">
+        <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <div>
+                    155
+                  </div>
+                </ion-col>
+                <ion-col>
+                  <div>
+                    2
+                  </div>
+                </ion-col>
+                <ion-col>
+                  <div>
+                   زيتون
+                  </div>
+                </ion-col>
+              </ion-row>
+        </ion-grid>
+      </ion-col>
+  </ion-row>
 </ion-content>
