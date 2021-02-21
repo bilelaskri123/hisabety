@@ -8,8 +8,6 @@ import * as $ from "jquery";
   styleUrls: ['./infraction.page.scss'],
 })
 export class InfractionPage implements OnInit {
-
-
   stocks = [
     {
       id:1,
