@@ -9,54 +9,139 @@ import * as $ from "jquery";
 })
 export class InfractionPage implements OnInit {
 
-  public myInput;
-  public shouldShowCancel;
 
-  imgArray: string[];
-  pagename: any;
-  Types: any;
-  myRating: number;
+  stocks = [
+    {
+      id:1,
+      name: "المخزن الرئيسي ",
+      products: [
+        {
+          name: "زيتون",
+          quantity: "100",
+          piece_numbers:"10"
+        },
+        {
+          name: "أرز",
+          quantity: "1000",
+          piece_numbers:"2"
+        },
+        {
+          name: "فول",
+          quantity: "500",
+          piece_numbers:"3"
+        }
+      ]
+    },
+    {
+      id:2,
+      name: "مخزن الشرق",
+      products: [
+        {
+          name: "دجاج",
+          quantity: "180",
+          piece_numbers:"5"
+        },
+        {
+          name: "ابقار",
+          quantity: "20",
+          piece_numbers:"3"
+        },
+        {
+          name: "علوش",
+          quantity: "100",
+          piece_numbers:"5"
+        }
+      ]
+    },
+    {
+      id:3,
+      name: "مخزن طرابلس",
+      products: [
+        {
+          name: "أسماك",
+          quantity: "450",
+          piece_numbers:"3"
+        },
+        {
+          name: "أسماك معلبة",
+          quantity: "3000",
+          piece_numbers:"2"
+        },
+        {
+          name: "أسماك جودة عالية",
+          quantity: "8",
+          piece_numbers:"2"
+        }
+      ]
+    },
+    {
+      id:4,
+      name: "مخزن مصراتة",
+      products: [
+        {
+          name: "حليب",
+          quantity: "2000",
+          piece_numbers:"5"
+        },
+        {
+          name: "البان",
+          quantity: "1000",
+          piece_numbers:"3"
+        },
+        {
+          name: "زبادي",
+          quantity: "500",
+          piece_numbers:"10"
+        }
+      ]
+    }
+  ];
+  depot = {
+    id: 0
+  };
+  products= [];
+  depots= [];
+  eventSource = [];
+  viewTitle: string;
 
-  constructor(private route: ActivatedRoute, private router: Router) { 
-    this.imgArray = ['assets/imgs/camion2.jpeg'];
-    this.Types = 1;
-  }
+  constructor() {}
 
   ngOnInit() {
-    this.myRating=4
-    this.route.params.subscribe(params => {
-      console.log(params)
-      this.pagename = params.name
-    })
-  }
+      this.stocks.map((stock) => {
 
-  rating(data){}
-
-  booking(name){
-    var params = {
-      name : name
-    }
-    this.router.navigate(['book', params]);
-  }
-  
-  myFunction(id) {
-    console.log(id)
-    var x = document.getElementById(id);
-      $(document).ready(function () {
-        $(x).slideToggle('slow');
+      stock.products.map((product) => {
+          this.products.push(product);
+        });
+        console.log('------ depots -----', this.products);
+        let depot ={
+          id: stock.id,
+          name: stock.name
+        };
+      this.depots.push(depot);
       });
+      console.log('------ depots -----',this.depots);
   }
 
-  notification() {
-    this.router.navigateByUrl('/notifications');
-  }
+public onChangeProduct(searchedProduct: string) {
+  console.log(searchedProduct);
+  let list =[];
+  this.products.map( (product) => {
+    if(product.name === searchedProduct ) {
+      console.log(searchedProduct);
+      list.push(product);
+    }
+  });
+  this.products = list;
+}
 
-  onInput(evenet) {
-    console.log(evenet.target.value);
-  }
 
-  onCancel(event) {
-    console.log(event.target.value);
+public onSelectChange(id: number) {
+    console.log(id);
+    this.products=[];
+    let stock =this.stocks[id-1];
+    stock.products.map((product) => {
+      this.products.push(product);
+    });
   }
 
 }

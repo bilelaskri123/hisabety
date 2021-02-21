@@ -8,9 +8,6 @@ import * as $ from "jquery";
   styleUrls: ['./trajet.page.scss'],
 })
 export class TrajetPage implements OnInit {
-
-
-
   stocks = [
     {
       id:1,
@@ -105,7 +102,7 @@ export class TrajetPage implements OnInit {
   eventSource = [];
   viewTitle: string;
 
-  constructor() {}
+  constructor(private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit() {
       this.stocks.map((stock) => {

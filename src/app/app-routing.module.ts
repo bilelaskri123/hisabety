@@ -95,7 +95,7 @@ const routes: Routes = [
     loadChildren: () => import('./planning/planning.module').then( m => m.PlanningPageModule)
   },
   {
-    path: 'equipement',
+    path: 'equipement/:id',
     loadChildren: () => import('./equipement/equipement.module').then( m => m.EquipementPageModule)
   }
 ];

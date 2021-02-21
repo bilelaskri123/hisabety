@@ -2,46 +2,10 @@ ion-content {
     --ion-background-color: #f6f6f6;
   }
 
-.labelPosition {
-    display: inline-block;
-    width: 20%;
-    margin-right: 0%;
-    text-align: right;
-    float: none;
-}
-form {
-  margin: 1rem;
-}
-
-.inputPostion {
-    display: inline-block;
-    position: relative;
-    width: 80%;
-    text-align: right;
-    height: auto;
-    border-radius: 5px;
-    border: 2px solid rgb(146, 164, 218);
-}
-
-.btnPosition {
-  font-size: 15px; 
-  width: 15%;
-  display: inline-block;
-  background-color: rgb(74, 123, 228);
-  align-items: center;
-  vertical-align: middle; 
-  vertical-align: top;
-  margin-top: .8rem;
-  height: 25px;
-}
-
-
-.itemPosition {
-  width: 80%;
-  display: inline-block; 
-  text-align: end; 
-  position: relative;  
-  margin-right: 0%;
+  .btn {
+    border-radius: 10px;
+    background-color: rgb(12, 12, 134);
+    text-align: center;
 }
 
  

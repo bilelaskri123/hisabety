@@ -61,7 +61,7 @@
 
       <ion-col size="12" class="array" >
         <ion-grid *ngFor="let product of products" >
-              <ion-row>
+              <ion-row [routerLink]="['/equipement', product.id]">
                 <ion-col style="color: green;">
                   <div>
                     {{product.quantity}}
