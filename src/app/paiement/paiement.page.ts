@@ -9,7 +9,6 @@ import * as $ from "jquery";
   styleUrls: ['./paiement.page.scss'],
 })
 export class PaiementPage implements OnInit {
-
  public date = new Date().toDateString();
 
   constructor(private route: ActivatedRoute, private router: Router) { 
