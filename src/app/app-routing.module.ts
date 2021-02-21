@@ -97,6 +97,10 @@ const routes: Routes = [
   {
     path: 'equipement/:id',
     loadChildren: () => import('./equipement/equipement.module').then( m => m.EquipementPageModule)
+  },
+  {
+    path: 'facture-details',
+    loadChildren: () => import('./facture-details/facture-details.module').then( m => m.FactureDetailsPageModule)
   }
 ];
 @NgModule({

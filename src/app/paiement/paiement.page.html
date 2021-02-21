@@ -66,13 +66,16 @@
       <ion-grid>
         <ion-row>
           <ion-col>
-            <div>دائن</div>
+            <div class="row-text">الصافي</div>
           </ion-col>
           <ion-col>
-            <div>مدين</div>
+            <div class="row-text">التاريخ</div>
           </ion-col>
           <ion-col>
-            <div></div>
+            <div class="row-text"> رقم الفاتورة </div>
+          </ion-col>
+             <ion-col>
+            <div class="row-text">  صاحب الفاتورة </div>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -80,15 +83,18 @@
 
     <ion-col size="12" class="array">
       <ion-grid *ngFor="let product of products">
-        <ion-row>
+        <ion-row (click)="presentModal()">
           <ion-col>
-            <div>{{product.quantity}}</div>
+            <div class="row-text">{{product.piece_numbers}}</div>
           </ion-col>
           <ion-col>
-            <div>{{product.piece_numbers}}</div>
+            <div class="row-text">{{product.quantity}}</div>
           </ion-col>
           <ion-col>
-            <div class="name">{{product.name}}</div>
+            <div class="name" class="row-text" >{{product.facture_number}}</div>
+          </ion-col>
+          <ion-col>
+            <div class="name" class="row-text" >{{product.facture_client}}</div>
           </ion-col>
         </ion-row>
       </ion-grid>

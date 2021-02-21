@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-
+import { FactureDetailsPage } from '../facture-details/facture-details.page';
+import { ModalController } from '@ionic/angular';
 import * as $ from "jquery";
 
 @Component({
@@ -9,25 +10,28 @@ import * as $ from "jquery";
   styleUrls: ['./paiement.page.scss'],
 })
 export class PaiementPage implements OnInit {
- 
+
   stocks = [
     {
       id:1,
       name: "المخزن الرئيسي ",
       products: [
         {
-          name: "زيتون",
-          quantity: "100",
+          facture_number: "123",
+          facture_client: "محمد أشرف ",
+          quantity: "21/2/2021",
           piece_numbers:"10"
         },
         {
-          name: "أرز",
-          quantity: "1000",
+          facture_number: "125",
+          facture_client: "محمد علي ",
+          quantity: "21/2/2021",
           piece_numbers:"2"
         },
         {
-          name: "فول",
-          quantity: "500",
+          facture_number: "156",
+          facture_client: "علي  ",
+          quantity: "21/2/2021",
           piece_numbers:"3"
         }
       ]
@@ -37,18 +41,21 @@ export class PaiementPage implements OnInit {
       name: "مخزن الشرق",
       products: [
         {
-          name: "دجاج",
-          quantity: "180",
+          facture_number: "145",
+          facture_client: " أشرف ",
+          quantity: "21/2/2021",
           piece_numbers:"5"
         },
         {
-          name: "ابقار",
-          quantity: "20",
+          facture_number: "489",
+          facture_client: "محمد  ",
+          quantity: "21/2/2021",
           piece_numbers:"3"
         },
         {
-          name: "علوش",
-          quantity: "100",
+          facture_number: "230",
+          facture_client: "محمد صلاح  ",
+          quantity: "21/2/2021",
           piece_numbers:"5"
         }
       ]
@@ -58,18 +65,21 @@ export class PaiementPage implements OnInit {
       name: "مخزن طرابلس",
       products: [
         {
-          name: "أسماك",
-          quantity: "450",
+          facture_number: "152",
+          facture_client: "محمد أشرف ",
+          quantity: "21/2/2021",
           piece_numbers:"3"
         },
         {
-          name: "أسماك معلبة",
-          quantity: "3000",
+          facture_number: "123",
+          facture_client: " صلاح  ",
+          quantity: "21/2/2021",
           piece_numbers:"2"
         },
         {
-          name: "أسماك جودة عالية",
-          quantity: "8",
+          facture_number: "485",
+          facture_client: "محمد صلاح  ",
+          quantity: "21/2/2021",
           piece_numbers:"2"
         }
       ]
@@ -79,18 +89,21 @@ export class PaiementPage implements OnInit {
       name: "مخزن مصراتة",
       products: [
         {
-          name: "حليب",
-          quantity: "2000",
+          facture_number: "452",
+          facture_client: "محمد أشرف ",
+          quantity: "21/2/2021",
           piece_numbers:"5"
         },
         {
-          name: "البان",
-          quantity: "1000",
+          facture_number: "496",
+          facture_client: "محمد أشرف ",
+          quantity: "21/2/2021",
           piece_numbers:"3"
         },
         {
-          name: "زبادي",
-          quantity: "500",
+          facture_number: "785",
+          facture_client: "محمد أشرف ",
+          quantity: "21/2/2021",
           piece_numbers:"10"
         }
       ]
@@ -104,7 +117,7 @@ export class PaiementPage implements OnInit {
   eventSource = [];
   viewTitle: string;
 
-  constructor() {}
+  constructor(public modalController: ModalController) {}
 
   ngOnInit() {
       this.stocks.map((stock) => {
@@ -115,7 +128,7 @@ export class PaiementPage implements OnInit {
         console.log('------ depots -----', this.products);
         let depot ={
           id: stock.id,
-          name: stock.name
+          facture_number: stock.name
         };
       this.depots.push(depot);
       });
@@ -142,6 +155,16 @@ public onSelectChange(id: number) {
     stock.products.map((product) => {
       this.products.push(product);
     });
+  }
+
+
+  async presentModal() {
+    const modal = await this.modalController.create({
+      component: FactureDetailsPage,
+      swipeToClose: true,
+      cssClass: 'my-custom-class'
+    });
+    return await modal.present();
   }
 
 
