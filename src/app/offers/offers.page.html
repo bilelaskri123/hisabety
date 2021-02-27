@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Docs</ion-title>
+    <ion-title>الوثائق</ion-title>
 
     <ion-buttons slot="end">
       <ion-button>
@@ -17,11 +17,11 @@
 
   <ion-item-sliding *ngFor="let x of [1,2,3,4,5,6,7,8]; ">
     <ion-item>
-      
+
         <ion-icon name="document-outline"></ion-icon>
-      
+
       <ion-label>
-        <h2>document</h2>
+        <h2> {{x}}وثيقة </h2>
       </ion-label>
       <ion-button slot="end" color="light">
         <ion-icon name="cloud-download-outline"></ion-icon>

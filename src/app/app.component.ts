@@ -13,11 +13,11 @@ import { Router } from '@angular/router';
 export class AppComponent {
   public appPages = [
     // { title: 'Home', url: '/home', icon: 'home' },
-    { title: 'Home', url: '/tabs', icon: 'home-outline' },
-    { title: 'Terms and Condition', url: '/terms', icon: 'alert-circle-outline' },
-    { title: 'About Us', url: '/about', icon: 'people' },
-    { title: 'Privacy Policy', url: '/privacy', icon: 'checkmark-done-circle-outline' },
-    { title: 'FAQ', url: '/faq', icon: 'flower' }
+    { title: 'الرئيسية', url: '/tabs', icon: 'home-outline' },
+    { title: 'أحكام وشروط', url: '/terms', icon: 'alert-circle-outline' },
+    { title: 'معلومات عنا', url: '/about', icon: 'people' },
+    { title: 'سياسة خاصة', url: '/privacy', icon: 'checkmark-done-circle-outline' },
+    { title: 'التعليمات', url: '/faq', icon: 'flower' }
   ];
   constructor(
     private platform: Platform,
@@ -35,7 +35,7 @@ export class AppComponent {
       this.splashScreen.hide();
       this.router.navigateByUrl('/login');
       // this.router.navigateByUrl('/tabs');
-      
+
     });
   }
   login(){
