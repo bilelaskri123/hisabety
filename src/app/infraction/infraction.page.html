@@ -12,16 +12,16 @@
 
 <ion-content>
   <ion-searchbar placeholder="البحث" showCancelButton="focus"></ion-searchbar>
-  <ion-row>
+  <!-- <ion-row>
     <ion-col size="12">
       <ion-list>
         <ion-item>
           <ion-label>المخازن</ion-label>
           <ion-select
-            [(ngModel)]="depot.id"
+            [(ngModel)]="depot"
             okText="موافق"
             cancelText="إلغاء"
-            (ionChange)="onSelectChange(depot.id)"
+            (ionChange)="onSelectChange(depot)"
           >
             <ion-select-option
               *ngFor="let depot of depots"
@@ -34,7 +34,7 @@
         </ion-item>
       </ion-list>
     </ion-col>
-  </ion-row>
+  </ion-row> -->
 
   <ion-row>
     <ion-col size="4">
@@ -43,12 +43,16 @@
       >
     </ion-col>
     <ion-col size="4">
-      <ion-checkbox color="danger" style="margin-top: 0.8rem"></ion-checkbox>
+      <ion-checkbox
+        color="danger"
+        [(ngModel)]="isChecked"
+        (change)="handleSelected($event)"
+        style="margin-top: 0.8rem"
+      ></ion-checkbox>
       <ion-label>الأرصدة الدائنة</ion-label>
     </ion-col>
-    <ion-col>
+    <ion-col size="4">
       <ion-checkbox
-        size="4"
         color="success"
         style="margin-top: 0.8rem"
       ></ion-checkbox>
@@ -57,41 +61,45 @@
   </ion-row>
 
   <ion-row>
-    <ion-col size="12" class="array" style="background-color: rgb(204, 200, 200); width: min-content;">
+    <ion-col
+      size="12"
+      class="array"
+      style="background-color: rgb(204, 200, 200); width: min-content"
+    >
       <ion-grid>
         <ion-row>
           <ion-col>
-            <div> دائن</div>
+            <div>دائن</div>
           </ion-col>
           <ion-col>
             <div>مدين</div>
           </ion-col>
           <ion-col>
-            <div></div>
+            <div>العميل</div>
           </ion-col>
         </ion-row>
       </ion-grid>
     </ion-col>
 
-    <ion-col size="12" class="array" >
-      <ion-grid *ngFor="let product of products" >
-            <ion-row>
-              <ion-col>
-                <div>
-                  {{product.quantity}}
-                </div>
-              </ion-col>
-              <ion-col>
-                <div>
-                   {{product.piece_numbers}}
-                </div>
-              </ion-col>
-              <ion-col>
-                <div class="name">
-                  {{product.name}}
-                </div>
-              </ion-col>
-            </ion-row>
+    <ion-col size="12" class="array">
+      <ion-grid *ngFor="let client of clients">
+        <ion-row (click)="showDetail(client.id)">
+          <ion-col >
+            <div style="color: green" *ngIf="client.status == 'da2en'">
+              {{client.credit}}
+            </div>
+            <div style="color: green" *ngIf="client.status == 'madin'">-</div>
+          </ion-col>
+          <ion-col>
+            <div style="color: red" *ngIf="client.status == 'madin'">
+              {{client.credit}}
+            </div>
+            <div style="color: red" *ngIf="client.status == 'da2en'">-</div>
+          </ion-col>
+          <ion-col>
+            <div class="name">{{client.clientName}}</div>
+          </ion-col>
+        </ion-row>
       </ion-grid>
     </ion-col>
   </ion-row>

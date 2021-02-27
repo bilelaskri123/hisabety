@@ -4,19 +4,22 @@
     <br>
     <img src="assets/imgs/login.png" class="logoImg" alt="">
     <h1 class="center">مرحبا</h1>
-    <div style="position: relative">
-      <input type="text" placeholder="إسم المستخدم" class="valueInput" [(ngModel)]="loginData.email"/>
-      <div class="inputImg vertical_centr">
-        <img src="assets/imgs/user2.png" alt="" width="20px">
+    <form >
+      <div style="position: relative">
+        <input type="text" name="username" placeholder="إسم المستخدم" class="valueInput" [(ngModel)]="loginData.email"/>
+        <div class="inputImg vertical_centr">
+          <img src="assets/imgs/user2.png" alt="" width="20px">
+        </div>
       </div>
-    </div>
-    <div style="position: relative">
-      <input type="password" placeholder="كلمة المرور" class="valueInput" [(ngModel)]="loginData.password">
-      
-      <div class="inputImg vertical_centr">
-        <img src="assets/imgs/password3.png" alt="" width="20px">
+
+      <div style="position: relative">
+        <input type="password" name="password" placeholder="كلمة المرور" class="valueInput" [(ngModel)]="loginData.password" autocomplete="username">
+        
+        <div class="inputImg vertical_centr">
+          <img src="assets/imgs/password3.png" alt="" width="20px">
+        </div>
       </div>
-    </div>
+    </form>
     <div class="forgot" (click)="forgotpassword()">هل نسيت كلمة السر؟</div>
     <br>
     <br>

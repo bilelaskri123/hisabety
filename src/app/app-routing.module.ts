@@ -101,6 +101,10 @@ const routes: Routes = [
   {
     path: 'facture-details',
     loadChildren: () => import('./facture-details/facture-details.module').then( m => m.FactureDetailsPageModule)
+  },
+  {
+    path: 'client-details/:id',
+    loadChildren: () => import('./client-details/client-details.module').then( m => m.ClientDetailsPageModule)
   }
 ];
 @NgModule({
