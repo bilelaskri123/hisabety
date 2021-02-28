@@ -28,6 +28,45 @@ export class InfractionPage implements OnInit {
     this.router.navigate(['client-details', clienId])
   }
 
+  setPositiveBalance(event, status: number) {
+    console.log(event.target.checked) ;
+
+    if ( event.target.checked ) {
+      console.log("Checked!");
+      if(status == 1 ) {
+
+        this.clients = this.clientService.getClients().map( (client) => {
+              if(client.status === "da2en") {
+                return client;
+              }
+        })
+
+      }
+   }else {
+    this.clients = this.clientService.getClients();
+   }
+  }
+
+
+  setNegativeBalance(event, status: number) {
+    console.log(event.target.checked) ;
+
+    if ( event.target.checked ) {
+      console.log("Checked!");
+      if(status == -1 ) {
+
+        this.clients = this.clientService.getClients().map( (client) => {
+              if(client.status === "madin") {
+                return client;
+              }
+        })
+
+      }
+   } else {
+    this.clients = this.clientService.getClients();
+   }
+  }
+
 
   public onChangeProduct(searchedProduct: string) {}
   public onSelectChange(id: number) {}

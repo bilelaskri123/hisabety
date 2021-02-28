@@ -46,13 +46,15 @@
       <ion-checkbox
         color="danger"
         [(ngModel)]="isChecked"
-        (change)="handleSelected($event)"
+        (change)="setNegativeBalance($event, -1 )"
+        (ionChange)="setNegativeBalance($event , -1)"
         style="margin-top: 0.8rem"
       ></ion-checkbox>
       <ion-label>الأرصدة الدائنة</ion-label>
     </ion-col>
     <ion-col size="4">
       <ion-checkbox
+       (ionChange)="setPositiveBalance($event, 1)"
         color="success"
         style="margin-top: 0.8rem"
       ></ion-checkbox>
