@@ -113,6 +113,10 @@ const routes: Routes = [
   {
     path: 'treasury-facture-detail/:treasuryId',
     loadChildren: () => import('./treasury-facture-detail/treasury-facture-detail.module').then( m => m.TreasuryFactureDetailPageModule)
+  },
+  {
+    path: 'bank-detail/:bankId',
+    loadChildren: () => import('./bank-detail/bank-detail.module').then( m => m.BankDetailPageModule)
   }
 ];
 @NgModule({

@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>كشف حركة بنك</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col size="6"></ion-col>
+    <ion-col size="3">
+      <ion-text> {{bank.bankName}} </ion-text>
+    </ion-col>
+    <ion-col size="3">
+      <ion-label>: البنك</ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="6"></ion-col>
+    <ion-col size="3">
+      <ion-text > {{bank.price}} </ion-text>
+    </ion-col>
+    <ion-col>
+      <ion-label size="3"></ion-label>
+      <ion-label>: الرصيد</ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="4">
+      <ion-button class="btn" color="light" expand="block" fill="outline"
+        >عرض</ion-button
+      >
+    </ion-col>
+    <ion-col size="2" style="margin-top: 0.3rem">
+      <ion-input type="date"></ion-input>
+    </ion-col>
+    <ion-col size="2" style="margin-top: 1rem">
+      <ion-label> :إلى</ion-label>
+    </ion-col>
+    <ion-col size="2" style="margin-top: 0.3rem">
+      <ion-input type="date"></ion-input>
+    </ion-col>
+    <ion-col size="2" style="margin-top: 1rem">
+      <ion-label> :من</ion-label>
+    </ion-col>
+  </ion-row>
+
+
+  <ion-row>
+    <ion-col
+      size="12"
+      class="array"
+      style="background-color: rgb(204, 200, 200); width: min-content"
+    >
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div class="row-text">الرصيد</div>
+          </ion-col>
+          <ion-col>
+            <div class="row-text">دائن</div>
+          </ion-col>
+          <ion-col>
+            <div class="row-text"> مدين </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-col>
+
+
+    <ion-col size="12" class="array">
+      <ion-grid *ngFor="let facture of factures">
+        <ion-row >
+          <ion-col>
+            <div class="row-text">{{facture.price}}</div>
+          </ion-col>
+          <ion-col style="color: green;">
+            <div class="row-text">{{facture.positive}}</div>
+          </ion-col>
+          <ion-col style="color: red;">
+            <div  class="row-text" >{{facture.negative}}</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-col>
+  </ion-row>
+</ion-content>
