@@ -99,7 +99,7 @@ const routes: Routes = [
     loadChildren: () => import('./equipement/equipement.module').then( m => m.EquipementPageModule)
   },
   {
-    path: 'facture-details',
+    path: 'facture-details/:clientId',
     loadChildren: () => import('./facture-details/facture-details.module').then( m => m.FactureDetailsPageModule)
   },
   {

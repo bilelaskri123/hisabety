@@ -76,7 +76,7 @@
 
     <ion-col size="12" class="array">
       <ion-grid *ngFor="let facture of factures">
-        <ion-row>
+        <ion-row (click)="factureDetails(facture.id)">
           <ion-col>
             <div class="row-text">{{facture.price}}</div>
           </ion-col>

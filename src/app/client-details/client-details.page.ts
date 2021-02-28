@@ -22,4 +22,8 @@ export class ClientDetailsPage implements OnInit {
     })
   }
 
+  factureDetails(factureId: string) {
+    this.router.navigate(['/facture-details', this.clientId, {factureId: factureId}])
+  }
+
 }

@@ -154,12 +154,12 @@ export class PaiementPage implements OnInit {
     });
   }
 
-  async presentModal() {
-    const modal = await this.modalController.create({
-      component: FactureDetailsPage,
-      swipeToClose: true,
-      cssClass: "my-custom-class",
-    });
-    return await modal.present();
-  }
+  // async presentModal() {
+  //   const modal = await this.modalController.create({
+  //     component: FactureDetailsPage,
+  //     swipeToClose: true,
+  //     cssClass: "my-custom-class",
+  //   });
+  //   return await modal.present();
+  // }
 }
