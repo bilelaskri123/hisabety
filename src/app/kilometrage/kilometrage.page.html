@@ -12,7 +12,7 @@
 
 <ion-content>
   <ion-searchbar placeholder="البحث" showCancelButton="focus"></ion-searchbar>
-  <ion-row>
+  <!-- <ion-row>
     <ion-col size="12">
       <ion-list>
         <ion-item>
@@ -34,7 +34,7 @@
         </ion-item>
       </ion-list>
     </ion-col>
-  </ion-row>
+  </ion-row> -->
 
   <ion-row>
     <ion-col size="4">
@@ -67,28 +67,34 @@
             <div>إيراد</div>
           </ion-col>
           <ion-col>
-            <div></div>
+            <div>الخزينة</div>
           </ion-col>
         </ion-row>
       </ion-grid>
     </ion-col>
 
     <ion-col size="12" class="array" >
-      <ion-grid *ngFor="let product of products" >
-            <ion-row>
+      <ion-grid *ngFor="let treasury of treasuries" >
+            <ion-row (click)="showDetail(treasury.id)">
               <ion-col>
-                <div>
-                  {{product.quantity}}
+                <div style="color: red;" *ngIf="treasury.status == false">
+                  {{treasury.credit}}
+                </div>
+                <div style="color: red;" *ngIf="treasury.status == true">
+                  -
                 </div>
               </ion-col>
               <ion-col>
-                <div>
-                   {{product.piece_numbers}}
+                <div style="color: green;" *ngIf="treasury.status == true">
+                   {{treasury.credit}}
                 </div>
+                <div style="color: green;" *ngIf="treasury.status == false">
+                 -
+               </div>
               </ion-col>
               <ion-col>
                 <div class="name">
-                  {{product.name}}
+                  {{treasury.type}}
                 </div>
               </ion-col>
             </ion-row>
