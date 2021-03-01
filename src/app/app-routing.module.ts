@@ -117,6 +117,10 @@ const routes: Routes = [
   {
     path: 'bank-detail/:bankId',
     loadChildren: () => import('./bank-detail/bank-detail.module').then( m => m.BankDetailPageModule)
+  },
+  {
+    path: 'sale-detail/:saleId',
+    loadChildren: () => import('./sale-detail/sale-detail.module').then( m => m.SaleDetailPageModule)
   }
 ];
 @NgModule({

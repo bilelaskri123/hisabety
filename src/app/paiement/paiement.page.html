@@ -19,17 +19,15 @@
         <ion-item>
           <ion-label>المخازن</ion-label>
           <ion-select
-            [(ngModel)]="depot.id"
             okText="موافق"
             cancelText="إلغاء"
-            (ionChange)="onSelectChange(depot.id)"
+            (ionChange)="onSelectChange($event.target.value)"
           >
             <ion-select-option
-              *ngFor="let depot of depots"
-              value="{{depot.id}}"
-              (click)="onSelectChange(1)"
+              *ngFor="let name of branches"
+              value="{{name}}"
             >
-              {{depot.name}}
+              {{name}}
             </ion-select-option>
           </ion-select>
         </ion-item>
@@ -82,19 +80,19 @@
     </ion-col>
 
     <ion-col size="12" class="array">
-      <ion-grid *ngFor="let product of products">
-        <ion-row >
+      <ion-grid *ngFor="let sale of salesFiltered">
+        <ion-row (click)="showSalesDetail(sale.id)">
           <ion-col>
-            <div class="row-text">{{product.piece_numbers}}</div>
+            <div class="row-text">{{sale.credit}}</div>
           </ion-col>
           <ion-col>
-            <div class="row-text">{{product.quantity}}</div>
+            <div class="row-text">{{sale.date}}</div>
           </ion-col>
           <ion-col>
-            <div class="name" class="row-text" >{{product.facture_number}}</div>
+            <div class="name" class="row-text" >{{sale.factureId}}</div>
           </ion-col>
           <ion-col>
-            <div class="name" class="row-text" >{{product.facture_client}}</div>
+            <div class="name" class="row-text" >{{sale.client}}</div>
           </ion-col>
         </ion-row>
       </ion-grid>
