@@ -95,8 +95,8 @@ const routes: Routes = [
     loadChildren: () => import('./planning/planning.module').then( m => m.PlanningPageModule)
   },
   {
-    path: 'equipement/:id',
-    loadChildren: () => import('./equipement/equipement.module').then( m => m.EquipementPageModule)
+    path: 'category-detail/:categoryId',
+    loadChildren: () => import('./category-detail/category-detail.module').then( m => m.CategoryDetailPageModule)
   },
   {
     path: 'facture-details/:clientId',

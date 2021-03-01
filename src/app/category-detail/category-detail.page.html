@@ -1,0 +1,102 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>كشف حركة صنف</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col size="6"></ion-col>
+    <ion-col size="3">
+      <ion-text>{{category.categoryName}}</ion-text>
+    </ion-col>
+    <ion-col size="3">
+      <ion-label>: الصنف</ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="6"></ion-col>
+    <ion-col size="3">
+      <ion-text > {{category.stockName}} </ion-text>
+    </ion-col>
+    <ion-col>
+      <ion-label size="3"></ion-label>
+      <ion-label>: المخزن</ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="4">
+      <ion-button class="btn" color="light" expand="block" fill="outline"
+        >عرض</ion-button
+      >
+    </ion-col>
+    <ion-col size="2" style="margin-top: 0.3rem">
+      <ion-input type="date"></ion-input>
+    </ion-col>
+    <ion-col size="2" style="margin-top: 1rem">
+      <ion-label> :إلى</ion-label>
+    </ion-col>
+    <ion-col size="2" style="margin-top: 0.3rem">
+      <ion-input type="date"></ion-input>
+    </ion-col>
+    <ion-col size="2" style="margin-top: 1rem">
+      <ion-label> :من</ion-label>
+    </ion-col>
+  </ion-row>
+
+
+  <ion-row>
+    <ion-col
+      size="12"
+      class="array"
+      style="background-color: rgb(204, 200, 200); width: min-content"
+    >
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div class="row-text">الرصيد</div>
+          </ion-col>
+          <ion-col>
+            <div class="row-text">السعر</div>
+          </ion-col>
+          <ion-col>
+            <div class="row-text"> الكمية </div>
+          </ion-col>
+          <ion-col>
+            <div class="row-text"> التاريخ </div>
+          </ion-col>
+          <ion-col>
+            <div class="row-text"> الفاتورة  </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-col>
+
+
+    <ion-col size="12" class="array">
+      <ion-grid *ngFor="let facture of factures">
+        <ion-row >
+          <ion-col>
+            <div class="row-text">{{facture.credit}}</div>
+          </ion-col>
+          <ion-col style="color: green;">
+            <div class="row-text" >{{facture.price}}</div>
+            
+          </ion-col>
+          <ion-col style="color: red;">
+            <div  class="row-text">{{facture.quantity}}</div>
+          </ion-col>
+          <ion-col>
+            <div class="row-text" >{{facture.date}}</div>
+          </ion-col>
+          <ion-col>
+            <div class="name" class="row-text" >{{facture.name}}</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-col>
+  </ion-row>
+</ion-content>
