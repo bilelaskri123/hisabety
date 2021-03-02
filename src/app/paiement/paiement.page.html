@@ -79,7 +79,7 @@
       </ion-grid>
     </ion-col>
 
-    <ion-col size="12" class="array">
+    <ion-col size="12" class="array" *ngIf="salesFiltered.length >0">
       <ion-grid *ngFor="let sale of salesFiltered">
         <ion-row (click)="showSalesDetail(sale.id)">
           <ion-col>
@@ -97,5 +97,6 @@
         </ion-row>
       </ion-grid>
     </ion-col>
+    <div *ngIf="salesFiltered.length <=0" class="text-info"> <h3>قائمة فارغة </h3></div>
   </ion-row>
 </ion-content>

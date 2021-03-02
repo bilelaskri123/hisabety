@@ -58,7 +58,7 @@
         </ion-grid>
       </ion-col>
 
-      <ion-col size="12" class="array" >
+      <ion-col size="12" class="array" *ngIf="listFiltred.length > 0">
         <ion-grid *ngFor="let category of listFiltred" >
               <ion-row [routerLink]="['/category-detail', category.id]">
                 <ion-col style="color: green;">
@@ -79,5 +79,6 @@
               </ion-row>
         </ion-grid>
       </ion-col>
+      <div *ngIf="listFiltred.length <=0" class="text-info"> <h3>قائمة فارغة </h3></div>
   </ion-row>
 </ion-content>
