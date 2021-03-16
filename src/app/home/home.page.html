@@ -1,16 +1,22 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header class="home-header">
+  <!--ion-toolbar--  class="home-toolbar">
     <ion-title>الرئيسية </ion-title>
     <ion-buttons slot="end">
       <ion-button expand="block" fill="clear" (click)="notification()">
         <ion-icon name="notifications"></ion-icon>
       </ion-button>
     </ion-buttons>
-  </ion-toolbar>
+  </!--ion-toolbar-->
+  <ion-row>
+    <ion-col size="3"> <img src="assets/icon/home.svg" alt="" class="home-button"> </ion-col>
+    <ion-col size="6"> <img src="assets/icon/user.svg" alt="" class="user-profile">  </ion-col>
+    <ion-col size="3"> <img src="assets/icon/notification.svg" alt="" class="user-notification">
+    </ion-col>
+  </ion-row>
 </ion-header>
 
 <ion-content>
-  <ion-searchbar placeholder="البحث " [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="onInput($event)" (ionCancel)="onCancel($event)">
+  <ion-searchbar class="search-input" placeholder="البحث " [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="onInput($event)" (ionCancel)="onCancel($event)">
   </ion-searchbar>
 
   <div cards>

@@ -29,9 +29,9 @@ ion-card {
 }
 .imag-container {
     display: flex;
-    margin-left: 35%;
-    width: 65px;
-    height: 65px;
+    margin-left: 25%;
+    width: 58px;
+    height: 50px;
     left: 243px;
     top: 358px;
     background: #EFF2FF;
@@ -48,7 +48,49 @@ h6 {
   font-weight: 500;
   margin-top: 10px;
   margin-bottom: 0px;
+  font-size: 15px;
 }
 .image_class {
 
+}
+
+.home-header {
+  height: 20%;
+  background-color: #1D2D66;
+  padding-top: 5%;
+}
+
+.home-toolbar {
+  height: 20%;
+  background-color: #1D2D66;
+}
+
+.toolbar-background {
+  height: 20%;
+  background-color: #1D2D66;
+}
+
+.toolbar-container {
+  height: 20%;
+  background-color: #1D2D66;
+}
+.user-profile{
+  width: 50%;
+  margin-left: 25%;
+  height: 94px;
+  border-radius: 16px;
+  border: 1px solid;
+}
+.home-button{
+  width: 50%;
+  margin-left: 25%;
+
+}
+.user-notification {
+    width: 50%;
+    margin-left: 25%;
+    height: 35%;
+}
+.search-input {
+  height: 45px;
 }
