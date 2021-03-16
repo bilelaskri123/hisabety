@@ -7,23 +7,17 @@
       "invite": "Now you have selected {{lang}}"
     },
     "HOME_PAGE": {
-      "customers_title": "الزبائن ",
-      "customers_subtitle": "اطلع على قائمة الزبائن ومعطياتهم  ",
-      "stored_title": "المخازن ",
-      "stores_subtitle": "الزبائن ",
-      "customers_title": "الزبائن ",
-      "customers_title": "الزبائن ",
-      "customers_title": "الزبائن ",
-      "customers_title": "الزبائن ",
-      "customers_title": "الزبائن ",
-      "customers_title": "الزبائن ",
-      "customers_title": "الزبائن ",
-      "customers_title": "الزبائن ",
-      "customers_title": "الزبائن ",
-      "customers_title": "الزبائن ",
-      "customers_title": "الزبائن ",
-
-
-
+      "customer_title": "الزبائن ",
+      "customer_subtitle": "اطلع على قائمة الزبائن ومعطياتهم  ",
+      "store_title": "المخازن ",
+      "store_subtitle": "يمكنك عرض جميع مخازن الشركة  ",
+      "treasury_title": "الخزينة ",
+      "treasury_subtitle": "ستجد كل ما يهم خزينة الشركة  ",
+      "expenses_title": "المصاريف  ",
+      "expenses_subtitle": "كل المعلومات عن مصاريف الشركة ",
+      "purchases_title": "المشتريات  ",
+      "purchases_subtitle": "يمكنك عرض كافة مبيعات الشركة  ",
+      "sales_title": "المبيعات  ",
+      "sales_subtitle": "يمكنك عرض كافة مشتريات الشركة  "
     }
   }
