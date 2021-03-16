@@ -1,17 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
+
 export class LoginPage implements OnInit {
-  loginData: any
+  loginData: any;
+  language: string = this.translateService.currentLang;
   constructor(
     private router: Router,
     public alertCtrl: AlertController,
+    private translateService: TranslateService
   ) {
     this.loginData = {}
   }
@@ -25,7 +29,7 @@ export class LoginPage implements OnInit {
   home() {
     this.router.navigateByUrl('/tabs');
   }
-  
+
   async forgotpassword() {
     const alert = await this.alertCtrl.create({
       header: 'Forgot Password!',
