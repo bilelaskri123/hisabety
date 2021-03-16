@@ -18,38 +18,44 @@
       <ion-row>
         <ion-col size="6" >
           <ion-card [routerLink] = "['/planning']">
-            <img src="assets/imgs/stock.png" alt="" class="catimg">
-            <h6 class="center margin_t_15">متابعة المخزون </h6>
+            <div class="imag-container"> <img src="assets/icon/customer.svg" alt="" class="catimg"> </div>
+            <h6 class="center margin_t_15"> {{ 'HOME_PAGE.customer_title' | translate }}  </h6>
+            <h6 class="center margin_t_15"> {{ 'HOME_PAGE.customer_subtitle' | translate }} </h6>
           </ion-card>
         </ion-col>
         <ion-col size="6" >
           <ion-card [routerLink] = "['/trajet']">
-            <img src="assets/imgs/writer.jpg" alt="" class="catimg">
-            <h6 class="center margin_t_15">حركة صنف </h6>
+            <div class="imag-container"> <img src="assets/icon/store.svg" alt="" class="catimg"> </div>
+            <h6 class="center margin_t_15"> {{ 'HOME_PAGE.store_title' | translate }}  </h6>
+            <h6 class="center margin_t_15"> {{ 'HOME_PAGE.store_subtitle' | translate }} </h6>
           </ion-card>
         </ion-col>
         <ion-col size="6">
           <ion-card [routerLink] = "['/paiement']">
-            <img src="assets/imgs/vente.jpg" alt="" class="catimg">
-            <h6 class="center margin_t_15">حركة مبيعات </h6>
+           <div class="imag-container"> <img src="assets/icon/expense.svg" alt="" class="catimg"> </div>
+            <h6 class="center margin_t_15"> {{ 'HOME_PAGE.expenses_title' | translate }}  </h6>
+            <h6 class="center margin_t_15"> {{ 'HOME_PAGE.expenses_subtitle' | translate }} </h6>
           </ion-card>
         </ion-col>
         <ion-col size="6">
           <ion-card [routerLink] = "['/infraction']">
-            <img src="assets/imgs/compte.jpg" alt="" class="catimg">
-            <h6 class="center margin_t_15">أرصدة العملاء </h6>
+            <div class="imag-container"> <img src="assets/icon/treasury.svg" alt="" class="catimg"> </div>
+            <h6 class="center margin_t_15"> {{ 'HOME_PAGE.treasury_title' | translate }}  </h6>
+            <h6 class="center margin_t_15"> {{ 'HOME_PAGE.treasury_subtitle' | translate }} </h6>
           </ion-card>
         </ion-col>
         <ion-col size="6">
           <ion-card [routerLink] = "['/sinistre']">
-            <img src="assets/imgs/bank.jpg" alt="" class="catimg">
-            <h6 class="center margin_t_15">أرصدة المصارف</h6>
+            <div class="imag-container"> <img src="assets/icon/purchase.svg" alt="" class="catimg"> </div>
+            <h6 class="center margin_t_15"> {{ 'HOME_PAGE.purchases_title' | translate }}  </h6>
+            <h6 class="center margin_t_15"> {{ 'HOME_PAGE.purchases_subtitle' | translate }} </h6>
           </ion-card>
         </ion-col>
         <ion-col size="6">
           <ion-card [routerLink] = "['/kilometrage']">
-            <img src="assets/imgs/coffre.jpg" alt="" class="catimg">
-            <h6 class="center margin_t_15">حركة خزينة </h6>
+            <div class="imag-container"> <img src="assets/icon/sales.svg" alt="" class="catimg"> </div>
+            <h6 class="center margin_t_15"> {{ 'HOME_PAGE.sales_title' | translate }}  </h6>
+            <h6 class="center margin_t_15"> {{ 'HOME_PAGE.sales_subtitle' | translate }} </h6>
           </ion-card>
         </ion-col>
       </ion-row>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
@@ -10,8 +11,9 @@ export class HomePage implements OnInit {
   imgArray: any;
   public myInput;
   public shouldShowCancel;
+  language: string = this.translateService.currentLang;
 
-  constructor( private router: Router) {
+  constructor( private router: Router , private translateService: TranslateService) {
     this.imgArray = ['assets/imgs/camion2.jpeg']
   }
 
@@ -35,6 +37,6 @@ export class HomePage implements OnInit {
   }
 
   onCancel(event) {
-    
+
   }
 }
