@@ -1,9 +1,9 @@
 ion-content {
-  --ion-background-color: #f6f6f6;
+  --ion-background-color: #ffffff;
 }
 
 .logoImg {
-  height: 125px;
+  height: 102px;
   margin: auto;
   display: table;
 }
@@ -16,6 +16,7 @@ ion-content {
 //   margin: auto;
 // }
 .valueInput {
+  border-radius: 5px;
   margin: auto;
   display: table;
   height: 50px;
@@ -24,12 +25,12 @@ ion-content {
   padding-right: 10px;
   font-size: 14px;
   margin-top: 15px;
-  box-shadow: 1px 2px 10px 1px rgba(15, 158, 168, 0.33);
-  border-radius: 25px;
-  border: 2px solid #3894eb;
+  border: 1px solid #E9E9E9;
   width: 90%;
-  color: #3894eb !important;
+  color: #1D2D66 !important;
   font-weight: 600;
+  background-color: #F8F8F8;
+
 }
 
 ion-icon {
@@ -42,11 +43,9 @@ ion-icon {
   float: right;
   width: 45px;
   height: 45px;
-  background-color: #fff;
   text-align: left;
   left: 8%;
   top: 2px;
-  border-radius: 25px;
 }
 
 .forgot {
@@ -71,10 +70,10 @@ ion-icon {
   height: 50px;
   font-size: 16px;
   text-transform: capitalize;
-  border-radius: 26px;
-  border: 2px solid #3894eb;
-  width: 50%;
-  background-color: #3894eb;
+  border: 2px solid #1D2D66;
+  width: 90%;
+  border-radius: 5px;
+  background-color: #1D2D66;
   color: #fff;
   font-weight: 700;
   box-shadow: 0px 0px 35px 3px rgba(224, 236, 236, 0.52);
@@ -110,8 +109,38 @@ ion-icon {
   margin: auto;
 }
 .spancreate {
-  color: #3894eb;
+  color: #1D2D66;
   font-weight: 700;
   text-decoration: underline;
 }
+#title {
+  color: #152C6A;
+  margin-top: 10px;
+  font-family: Poppins;
+  font-size: 41.3103px;
 
+}
+
+
+#sub_title {
+  margin-top: 10px;
+  color: #505050;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19.3103px;
+  line-height: 28px;
+  /* or 143% */
+
+  letter-spacing: -0.331034px;
+}
+
+
+#welcome_title {
+color: #1D2D66;
+font-family: Swissra-Bold;
+font-size: 36px;
+line-height: 42px;
+text-align: center;
+text-transform: uppercase;
+}

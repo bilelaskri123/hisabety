@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-signup',
@@ -17,7 +18,7 @@ export class SignupPage implements OnInit {
 
   ngOnInit() {
   }
-  
+
   login() {
     this.navCtrl.pop()
   }

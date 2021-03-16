@@ -1,6 +1,6 @@
 <ion-content>
   <div class="medialogin">
-  <p translate [translateParams]="{ lang: language }">tab1.invite</p>
+  <!--p translate [translateParams]="{ lang: language }">tab1.invite</!--p -->
     <br>
     <br>
     <ion-row>
@@ -9,17 +9,15 @@
     </ion-col>
 
     <ion-col size="6">
-
+       <h1 class="center" id="title"> {{ 'COMPANY_NAME' | translate }} </h1>
+       <h1 class="center" id="sub_title"> {{ 'COMPANY_SUB_NAME' | translate }} </h1>
     </ion-col>
 
     </ion-row>
-    <h1 class="center"> {{ 'HELLO' | translate }} </h1>
+    <h1 class="center" id="welcome_title"> {{ 'HELLO' | translate }} </h1>
     <form >
       <div style="position: relative">
         <input type="text" name="username" placeholder="إسم المستخدم" class="valueInput" [(ngModel)]="loginData.email"/>
-        <div class="inputImg vertical_centr">
-          <img src="assets/imgs/user2.png" alt="" width="20px">
-        </div>
       </div>
 
       <div style="position: relative">

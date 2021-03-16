@@ -1,7 +1,29 @@
 {
-    "HELLO": "test",
+    "HELLO": "مرحباً بك ",
+    "COMPANY_NAME": "شركتي",
+    "COMPANY_SUB_NAME": "Sharikati Inc",
     "tab1": {
       "tabName": "Tab One goes here",
       "invite": "Now you have selected {{lang}}"
+    },
+    "HOME_PAGE": {
+      "customers_title": "الزبائن ",
+      "customers_subtitle": "اطلع على قائمة الزبائن ومعطياتهم  ",
+      "stored_title": "المخازن ",
+      "stores_subtitle": "الزبائن ",
+      "customers_title": "الزبائن ",
+      "customers_title": "الزبائن ",
+      "customers_title": "الزبائن ",
+      "customers_title": "الزبائن ",
+      "customers_title": "الزبائن ",
+      "customers_title": "الزبائن ",
+      "customers_title": "الزبائن ",
+      "customers_title": "الزبائن ",
+      "customers_title": "الزبائن ",
+      "customers_title": "الزبائن ",
+      "customers_title": "الزبائن ",
+
+
+
     }
   }
