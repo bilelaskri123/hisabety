@@ -55,11 +55,20 @@ h6 {
 }
 
 .home-header {
-  height: 20%;
+  height: 30%;
   background-color: #1D2D66;
   padding-top: 5%;
 }
-
+.profile-info{
+  width: 162px;
+    left: calc(50% - 162px/2 - 0.5px);
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    color: #FFFFFF;
+}
 .home-toolbar {
   height: 20%;
   background-color: #1D2D66;
