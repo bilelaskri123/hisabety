@@ -100,3 +100,58 @@ ion-button:hover {
   background-color: blue;
   color: white;
 }
+.store-content {
+  --ion-background-color: #ffffff;
+}
+.filters-button{
+  width: 90%;
+  font-size: 15px;
+  background: #FFFFFF;
+  box-shadow: 0px 0.728155px 3.64078px rgb(18 34 97 / 10%);
+  --ion-color-base: #fff !important;
+  border-radius: 5.82524px;
+}
+
+.filter-input.search {
+  background-color: #fff;
+  border: 1px solid #E9E9E9;
+  box-sizing: border-box;
+  border-radius: 8px;
+  height: 43px;
+}
+
+.page-title{
+  font-family: Swissra-Bold;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+}
+.filter-img {
+  padding-top: 15%;
+}
+
+
+.filter-input.searchbar-input-container.searchbar-input {
+  font-family: Swissra-Light;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: right;
+  color: #585858;
+  background-color: #ffffff !important;
+  border: 1px solid #E9E9E9;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.product-row {
+  background: #FFFFFF;
+    box-shadow: 0px 1px 5px rgb(18 34 97 / 10%);
+    border-radius: 8px;
+    /* width: 356px; */
+    height: 60px;
+    left: calc(50% - 343px/2);
+    top: 0px;
+    padding-top: 14px;
+}
