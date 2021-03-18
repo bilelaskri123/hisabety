@@ -101,7 +101,7 @@ ion-button:hover {
   color: white;
 }
 .store-content {
-  --ion-background-color: #ffffff;
+  --ion-background-color: #FAFAFA;
 }
 .filters-button{
   width: 90%;
@@ -162,4 +162,9 @@ ion-button:hover {
     border-radius: 5.82524px;
     background: #FFFFFF;
     box-shadow: 0px 0.728155px 3.64078px rgb(18 34 97 / 10%);
+}
+
+.store-array-header{
+
+  background-color: #ffffff;
 }
