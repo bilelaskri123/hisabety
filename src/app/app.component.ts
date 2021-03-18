@@ -13,12 +13,14 @@ import { TranslateService } from '@ngx-translate/core'
 })
 export class AppComponent {
   public appPages = [
-    // { title: 'Home', url: '/home', icon: 'home' },
-    { title: 'الرئيسية', url: '/tabs', icon: 'home-outline' },
-    { title: 'أحكام وشروط', url: '/terms', icon: 'alert-circle-outline' },
-    { title: 'معلومات عنا', url: '/about', icon: 'people' },
-    { title: 'سياسة خاصة', url: '/privacy', icon: 'checkmark-done-circle-outline' },
-    { title: 'التعليمات', url: '/faq', icon: 'flower' }
+    { title: 'الرئيسية', url: '/tabs', icon: 'assets/icon/home1.svg' },
+    { title: 'الإعدادات', url: '/terms', icon: 'assets/icon/setting.svg' },
+    { title: 'المخازن', url: '/about', icon: 'assets/icon/store.svg' },
+    { title: 'الزبائن', url: '/privacy', icon: 'assets/icon/customer.svg' },
+    { title: 'المصاريف', url: '/faq', icon: 'assets/icon/purchase.svg' },
+    { title: 'الخزينة', url: '/tabs', icon: 'assets/icon/treasury.svg' },
+    { title: 'المبيعات', url: '/terms', icon: 'assets/icon/sales.svg' },
+    { title: 'المشتريات', url: '/about', icon: 'assets/icon/home1.svg' }
   ];
   constructor(
     private platform: Platform,

@@ -1,0 +1,20 @@
+.custom {
+  display: flex;
+  direction: rtl;
+}
+.menu-list{
+  margin-bottom: 15px;
+  margin-top: 15px;
+  border-bottom: 1px solid;
+}
+ion-col.logo.ios.hydrated {
+  display: flex;
+  direction: rtl;
+}
+ion-col.menu-logo.ios.hydrated {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.custom-menu {
+  --width: 380px;
+}

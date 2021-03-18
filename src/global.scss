@@ -26,7 +26,7 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 .center{text-align: center !important}
-.center_box{margin: auto;display: table}    
+.center_box{margin: auto;display: table}
 .padding_l_15{padding-left: 15px !important;}
 .padding_l_10{padding-left: 10px !important;}
 .padding_0{padding: 0px !important}
@@ -101,7 +101,7 @@
     top: 6px !important;
     margin: 0 auto !important;
  }
-    
+
  .vertical_centrC{
      display: -webkit-box;
      display: -ms-flexbox;
@@ -137,7 +137,7 @@
      font-style: normal;
      font-size:12px;
    }
-   
+
    @font-face {
      font-family: 'Comfortaa_Regular';
      src: url('assets/fonts/Comfortaa_Bold.ttf') format('truetype');
@@ -150,7 +150,7 @@
    * {
      font-family: 'Comfortaa_Regular'    ;
    }
-   
+
  .toast-md .toast-wrapper.toast-middle{
      width: 80%;
      height: 70px;
@@ -171,13 +171,13 @@
      font-weight: 700;
      border-radius: 35px;
  }
- 
+
  .toast-md .toast-message{
      color: #fff;
      padding: none;
      font-size: 16px;
  }
- 
+
  .toast-ios .toast-message{
      color: #fff;
      padding: none;
@@ -189,24 +189,24 @@
  .loader_class{
      height: 50px;
  }
- 
- @media only screen 
-     and (device-width : 375px) 
-     and (device-height : 812px) 
+
+ @media only screen
+     and (device-width : 375px)
+     and (device-height : 812px)
      and (-webkit-device-pixel-ratio : 3) {
          .logo{ margin-top: 25% !important;}
     }
- 
- @media only screen 
-     and (device-width : 375px) 
-     and (device-height : 667px) 
+
+ @media only screen
+     and (device-width : 375px)
+     and (device-height : 667px)
      and (-webkit-device-pixel-ratio : 2) { }
- 
- @media only screen 
-     and (device-width : 414px) 
-     and (device-height : 736px) 
+
+ @media only screen
+     and (device-width : 414px)
+     and (device-height : 736px)
      and (-webkit-device-pixel-ratio : 3) { }
-  
+
 .email{
     margin : 0px
 }
@@ -216,10 +216,13 @@
     margin-bottom: 5px;
 }
 .toprow{
-    background-color: lightgrey;
+    background-color: #ffffff;
 }
 .logoutBtn{
     float: right;
     color: #fff;
     text-transform: capitalize;
+}
+:host {
+    --width: 380px;
 }

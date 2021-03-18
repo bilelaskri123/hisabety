@@ -1,6 +1,6 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
-    <ion-menu contentId="main-content" type="overlay">
+    <ion-menu contentId="main-content" type="overlay" class="custom-menu">
       <ion-header>
         <ion-toolbar>
           <ion-title>قائمة</ion-title>
@@ -8,7 +8,7 @@
       </ion-header>
       <ion-content>
         <ion-list class="toprow">
-          <ion-row menuClose>
+         <!-- <ion-row menuClose>
             <ion-col size="3" class="vertical_centr">
               <ion-avatar item-start class="vertical_centr">
                 <ion-icon name="person-circle-outline" class="font_50"></ion-icon>
@@ -18,13 +18,23 @@
               <h2 class="uname">الدخول & التسجيل</h2>
               <p class="email">الرجاء الدخول أو التسجيل </p>
             </ion-col>
+          </ion-row> -->
+          <ion-row>
+                <ion-col size="6" class="menu-logo">
+                    <img src="assets/icon/logo.svg" class="logoImg" alt="">
+                </ion-col>
+
+                <ion-col size="6">
+                  <h1 class="center" id="title"> {{ 'COMPANY_NAME' | translate }} </h1>
+                  <h1 class="center" id="sub_title"> {{ 'COMPANY_SUB_NAME' | translate }} </h1>
+                </ion-col>
           </ion-row>
         </ion-list>
 
         <ion-list class="list-menu">
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
-            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
-              <ion-icon slot="start" [name]="p.icon"></ion-icon>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages" >
+            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]" class="menu-list custom">
+              <img slot="start" [src]="p.icon" />
               <ion-label>
                 {{p.title}}
               </ion-label>
