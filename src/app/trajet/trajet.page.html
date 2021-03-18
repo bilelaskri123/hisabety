@@ -1,8 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      الاصناف
-    </ion-title>
+    <ion-title> الاصناف </ion-title>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
@@ -17,68 +15,85 @@
 <ion-content>
   <ion-row>
     <ion-col size="12">
-     <ion-searchbar placeholder="البحث " (search)='onChangeProduct($event.target.value)'>
+      <ion-searchbar
+        placeholder="البحث "
+        (search)="onChangeProduct($event.target.value)"
+      >
       </ion-searchbar>
     </ion-col>
   </ion-row>
 
   <ion-row>
-      <ion-col size="12">
+    <ion-col size="12">
       <ion-list>
-            <ion-item>
-              <ion-label>المخازن</ion-label>
-              <ion-select   okText="موافق" cancelText="إلغاء"  (ionChange)="onSelectChange($event.target.value)">
-                <ion-select-option *ngFor="let name of stockSName" value={{name}}> {{name}} </ion-select-option>
-              </ion-select>
-            </ion-item>
+        <ion-item>
+          <ion-label style="text-align: right">المخازن</ion-label>
+          <ion-select
+            okText="موافق"
+            cancelText="إلغاء"
+            (ionChange)="onSelectChange($event.target.value)"
+          >
+            <ion-select-option *ngFor="let name of stockSName" value="{{name}}">
+              {{name}}
+            </ion-select-option>
+          </ion-select>
+        </ion-item>
       </ion-list>
     </ion-col>
   </ion-row>
 
-  <ion-row >
-      <ion-col size="12" class="array" style="background-color: rgb(187, 184, 184);">
-        <ion-grid>
-              <ion-row>
-                <ion-col>
-                  <div>
-                    الكمية
-                  </div>
-                </ion-col>
-                <ion-col>
-                  <div>
-                   رقم القطعة
-                  </div>
-                </ion-col>
-                <ion-col>
-                  <div>
-                   الصنف
-                  </div>
-                </ion-col>
-              </ion-row>
-        </ion-grid>
-      </ion-col>
+  <ion-row style="margin: auto">
+    <ion-col size="4" class="array">
+      <ion-button color="light">كشف المنصرف</ion-button>
+    </ion-col>
+    <ion-col size="4" class="array">
+      <ion-button color="light">كشف الوارد</ion-button>
+    </ion-col>
+    <ion-col size="4" class="array" style="align-content: flex-end">
+      <ion-button class="clicked" color="light">كشف مفصل</ion-button>
+    </ion-col>
+  </ion-row>
 
-      <ion-col size="12" class="array" *ngIf="listFiltred.length > 0">
-        <ion-grid *ngFor="let category of listFiltred" >
-              <ion-row [routerLink]="['/category-detail', category.id]">
-                <ion-col style="color: green;">
-                  <div>
-                    {{category.quantity}}
-                  </div>
-                </ion-col>
-                <ion-col>
-                  <div>
-                     {{category.categoryNumber}}
-                  </div>
-                </ion-col>
-                <ion-col>
-                  <div class="name">
-                    {{category.categoryName}}
-                  </div>
-                </ion-col>
-              </ion-row>
-        </ion-grid>
-      </ion-col>
-      <div *ngIf="listFiltred.length <=0" class="text-info"> <h3>قائمة فارغة </h3></div>
+  <ion-button color="light" class="search" expand="block">بحث</ion-button>
+
+  <ion-row>
+    <ion-col
+      size="12"
+      class="array"
+      style="background-color: rgb(187, 184, 184)"
+    >
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>الكمية</div>
+          </ion-col>
+          <ion-col>
+            <div>رقم القطعة</div>
+          </ion-col>
+          <ion-col>
+            <div>الصنف</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-col>
+
+    <ion-col size="12" class="array" *ngIf="listFiltred.length > 0">
+      <ion-grid *ngFor="let category of listFiltred">
+        <ion-row [routerLink]="['/category-detail', category.id]">
+          <ion-col style="color: green">
+            <div>{{category.quantity}}</div>
+          </ion-col>
+          <ion-col>
+            <div>{{category.categoryNumber}}</div>
+          </ion-col>
+          <ion-col>
+            <div class="name">{{category.categoryName}}</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-col>
+    <div *ngIf="listFiltred.length <=0" class="text-info">
+      <h3>قائمة فارغة</h3>
+    </div>
   </ion-row>
 </ion-content>
