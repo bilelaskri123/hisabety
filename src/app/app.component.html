@@ -33,7 +33,7 @@
 
         <ion-list class="list-menu">
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages" >
-            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]" class="menu-list custom">
+            <ion-item  [routerDirection]="'root'" [routerLink]="[p.url]" class="menu-list custom menu-items">
               <img slot="start" [src]="p.icon" />
               <ion-label>
                 {{p.title}}
@@ -42,7 +42,7 @@
           </ion-menu-toggle>
 
           <ion-menu-toggle auto-hide="false">
-            <ion-item [routerDirection]="'root'" [routerLink]="'/logout'" class="menu-list custom">
+            <ion-item [routerDirection]="'root'" [routerLink]="'/logout'" class="menu-list custom menu-items">
               <img slot="start" src="assets/icon/logout.svg" />
               <ion-label>
                 خروج

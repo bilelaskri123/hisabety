@@ -3,8 +3,8 @@
   direction: rtl;
 }
 .menu-list{
-  margin-bottom: 15px;
-  margin-top: 15px;
+  padding-bottom: 11px;
+  padding-top: 11px;
   border-bottom: 1px solid #E9E9E9;
 }
 ion-col.logo.ios.hydrated {
@@ -21,4 +21,16 @@ ion-col.menu-logo.ios.hydrated {
 .logoImg{
   width: 50%;
   height: 100%;
+}
+
+.toprow{
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+.inner-item{
+  border: 1px solid #ffffff !important;
+}
+.menu-items{
+  --border-style: auto;
 }
