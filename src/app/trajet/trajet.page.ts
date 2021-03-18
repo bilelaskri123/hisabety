@@ -12,6 +12,7 @@ export class TrajetPage implements OnInit {
   public categories = [];
   stockSName = ["المخزن الرئيسي", "مخزن الشرق", "مخزن طرابلس", "مخزن مصراتة"];
   public listFiltred = [];
+  public displayFilter=false;
   constructor(
     private router: Router,
     private categoriesService: CategoriesService
@@ -29,5 +30,9 @@ export class TrajetPage implements OnInit {
     this.listFiltred = this.listFiltred.filter(
       (category) => category.stockName === value
     );
+  }
+  displayFilters(event: any){
+    console.log(event);
+    this.displayFilter= !this.displayFilter;
   }
 }
