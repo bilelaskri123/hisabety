@@ -1,11 +1,11 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay" class="custom-menu">
-      <ion-header>
+     <!-- <ion-header>
         <ion-toolbar>
           <ion-title>قائمة</ion-title>
         </ion-toolbar>
-      </ion-header>
+      </ion-header>-->
       <ion-content>
         <ion-list class="toprow">
          <!-- <ion-row menuClose>
@@ -37,6 +37,15 @@
               <img slot="start" [src]="p.icon" />
               <ion-label>
                 {{p.title}}
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle auto-hide="false">
+            <ion-item [routerDirection]="'root'" [routerLink]="'/logout'" class="menu-list custom">
+              <img slot="start" src="assets/icon/logout.svg" />
+              <ion-label>
+                خروج
               </ion-label>
             </ion-item>
           </ion-menu-toggle>

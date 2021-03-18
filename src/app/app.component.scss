@@ -5,7 +5,7 @@
 .menu-list{
   margin-bottom: 15px;
   margin-top: 15px;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid #E9E9E9;
 }
 ion-col.logo.ios.hydrated {
   display: flex;
@@ -17,4 +17,8 @@ ion-col.menu-logo.ios.hydrated {
 }
 .custom-menu {
   --width: 380px;
+}
+.logoImg{
+  width: 50%;
+  height: 100%;
 }
