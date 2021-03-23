@@ -53,13 +53,12 @@ h6 {
 }
 
 .home-header {
-  height: 20%;
+  height: 25%;
   background-color: #1D2D66;
-  padding-top: 1%;
-  padding-bottom: 1%;
+  padding-top: 7%;
+  padding-bottom: 2%;
 }
 .profile-info{
-  width: 155px;
     left: calc(50% - 162px/2 - 0.5px);
     font-family: Poppins;
     font-style: normal;
@@ -83,9 +82,9 @@ h6 {
   background-color: #1D2D66;
 }
 .user-profile{
-  width: 35%;
+  width: 55%;
     margin-left: 25%;
-    height: 45%;
+    height: 55%;
     border-radius: 16px;
     border: 1px solid;
 }
@@ -95,9 +94,9 @@ h6 {
 
 }
 .user-notification {
-  width: 50%;
-  margin-left: 25%;
-  height: 25%;
+  width: 30%;
+  margin-left: 35%;
+  height: 20%;
 }
 .search-input {
   height: 45px;
