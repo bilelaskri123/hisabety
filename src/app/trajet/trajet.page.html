@@ -21,20 +21,21 @@
      <img src="assets/icon/filters.svg" class="filter-img" (click)="displayFilters($event)" >
      </ion-col>
   </ion-row>
-   <ion-row *ngIf="displayFilter">
+   <ion-row >
     <ion-col size="12">
       <ion-searchbar
       class="filter-input"
         placeholder="البحث عن صنف  "
+        color="white"
         (search)="onChangeProduct($event.target.value)"
       >
       </ion-searchbar>
        </ion-col>
   </ion-row>
 
-  <ion-row *ngIf="displayFilter" >
+  <ion-row  >
     <ion-col size="12">
-      <ion-list class="store-list">
+      <ion-list class="store-list" lines="none">
         <ion-item>
           <ion-label style="text-align: right">المخازن</ion-label>
           <ion-select
@@ -51,7 +52,7 @@
     </ion-col>
   </ion-row>
 
-  <ion-row style="margin: auto"  *ngIf="displayFilter" >
+  <ion-row style="margin: auto"   >
     <ion-col size="4" class="array">
       <ion-button color="light filters-button">كشف المنصرف</ion-button>
     </ion-col>
@@ -64,7 +65,7 @@
 
   </ion-row>
 
-  <ion-button color="light" *ngIf="displayFilter" class="search" expand="block">بحث</ion-button>
+  <ion-button color="light"  class="search" expand="block">بحث</ion-button>
 
   <ion-row>
     <ion-col

@@ -158,10 +158,26 @@ ion-button:hover {
 
 
 .store-list{
-
+  background: #FFFFFF;
+  box-shadow: 0px 0.728155px 3.64078px rgb(18 34 97 / 10%);
+  border-radius: 5.82524px;
+  height: 43px;
 }
 
 .store-array-header{
 
   background-color: #ffffff;
+}
+
+.filter-input {
+  background: #FFFFFF;
+  border: 1px solid #E9E9E9;
+  box-sizing: border-box;
+  border-radius: 8px;
+  height: 48px;
+}
+ion-list {
+  /* Applies to the value and placeholder color */
+  background-color: #ffffff;
+  color: #000000;
 }
