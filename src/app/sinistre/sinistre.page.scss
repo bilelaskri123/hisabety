@@ -3,3 +3,50 @@
     background-color: rgb(12, 12, 134);
     text-align: center;
 }
+
+ion-searchbar {
+    text-align: end;
+}
+
+ion-button {
+    margin-bottom: 1rem;
+}
+
+.filter-img {
+    margin-top: 15%;
+    border: #d5d8df;
+    opacity: 30%;
+    border-image-slice: 30%;
+}
+
+ion-col {
+    text-align: right;
+}
+
+ion-select::part(icon) {
+    display: none!important;
+}
+
+.acceuil {
+    width: 30%;
+    height: 15%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #EFF2FF;
+    border-color: deepskyblue;
+    border-radius: 25.1852px;
+}
+
+.acceuil img{
+
+    width: 30%;
+    position: relative;
+    margin: auto;
+    transform: translateY(-50%, -50%);
+}
+
+h3 {
+    text-align: center;
+}

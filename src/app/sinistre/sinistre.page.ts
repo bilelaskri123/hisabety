@@ -10,14 +10,11 @@ import { BankService } from '../services/bank.service';
 })
 export class SinistrePage implements OnInit {
 
-  banks = [];
- 
+  contrats = [];
 
   constructor(private router: Router, private bankService: BankService) {}
 
-  ngOnInit() {
-    this.banks = this.bankService.getBanks();
-  }
+  ngOnInit() {}
 
   showBankDetail(bankId: string) {
     this.router.navigate(['bank-detail', bankId]);
