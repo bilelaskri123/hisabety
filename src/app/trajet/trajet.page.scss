@@ -99,7 +99,6 @@ color: #FFF;
 background: #CCCED3;
 box-shadow: 0px 9px 18px rgba(170, 104, 210, 0.04);
 border-radius: 8px;
-font-family: Swissra-Bold;
 font-size: 20px;
 line-height: 19px;
 }
@@ -129,8 +128,7 @@ ion-button:hover {
 }
 
 .page-title{
-  font-family: Swissra-Bold;
-    font-size: 20px;
+    font-size: 24px;
     line-height: 28px;
     text-align: center;
     text-transform: uppercase;
@@ -213,33 +211,30 @@ ion-list {
   background: #122261 ;
 }
 .notice {
-  font-family: Swissra-Bold;
 font-size: 16px;
 line-height: 19px;
 text-align: center;
 color: rgba(18, 34, 97, 0.6);
+margin: auto;
+margin-top: 30px;
+font-size: 18px;
 }
 .notactive{
   background: #FFFFFF ;
 
 }
 .no-data {
-width: 120px;
-height: 120px;
-left: 127px;
-top: 493px;
-background: #EFF2FF;
-border-radius: 25.1852px;
-display: flex;
-flex-direction: column;
-margin-top: 10%;
-margin-left: 30%;
-margin-bottom: 10%;
+    background: #EFF2FF;
+    border-radius: 25.1852px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 25vw;
+    width: 25vw;
 }
 
 .no-data-img {
   height: 60%;
   width: 60%;
-  margin-top: 20%;
-  margin-left: 20%;
+  margin: auto;
 }
