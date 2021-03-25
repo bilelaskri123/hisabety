@@ -13,7 +13,8 @@
 </ion-header>
 
 <ion-content class="store-content">
-  <ion-row>
+<div class="top-content">
+  <ion-row >
     <ion-col size="9">
       <p class="page-title"> المخازن  </p>
     </ion-col>
@@ -54,19 +55,20 @@
 
   <ion-row style="margin: auto"   >
     <ion-col size="4" class="array">
-      <ion-button color="light filters-button">كشف المنصرف</ion-button>
+      <button color="filters-button" [ngClass]="(output_clicked==true)?'btn clicked-output':'search'"  (click)="getStoresOutput($event)">كشف المنصرف</button>
     </ion-col>
     <ion-col size="4" class="array">
-      <ion-button color="light filters-button ">كشف الوارد</ion-button>
+      <button  class="filters-button" [ngClass]="(input_clicked==true)?'btn clicked-input':'search'" (click)="getStoresInput($event)" >كشف الوارد</button>
     </ion-col>
     <ion-col size="4" class="array" style="align-content: flex-end">
-      <ion-button class="clicked filters-button" color="light">كشف مفصل</ion-button>
+      <button class="filters-button" [ngClass]="(details_clicked==true)?'btn clicked-details':'search'" expand="block" (click)="getStoresDetails($event)">كشف مفصل</button>
     </ion-col>
 
   </ion-row>
 
-  <ion-button color="light"  class="search" expand="block">بحث</ion-button>
-
+  <button   class="search" [ngClass]="(clicked==true)?'btn clicked':'search'" expand="block" (click)="getStores($event)" >بحث</button>
+</div>
+<div class="bottom-content">
   <ion-row>
     <ion-col
       size="12"
@@ -106,4 +108,5 @@
       <h3>قائمة فارغة</h3>
     </div>
   </ion-row>
+  </div>
 </ion-content>
