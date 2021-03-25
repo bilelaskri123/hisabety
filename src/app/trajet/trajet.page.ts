@@ -45,14 +45,20 @@ export class TrajetPage implements OnInit {
   }
   getStoresInput(event: any) {
     this.clicked = false;
+    this.output_clicked = false ;
+    this.details_clicked = false ;
     this.input_clicked = !this.input_clicked;
   }
   getStoresOutput(event: any) {
     this.clicked = false;
+    this.input_clicked = false;
+    this.details_clicked = false;
     this.output_clicked = !this.output_clicked;
   }
   getStoresDetails(event: any) {
     this.clicked = false;
+    this.output_clicked = false;
+    this.input_clicked = false;
     this.details_clicked = !this.details_clicked;
   }
 }
