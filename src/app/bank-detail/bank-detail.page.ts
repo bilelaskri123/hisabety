@@ -13,6 +13,7 @@ export class BankDetailPage implements OnInit {
   public bank;
   private bankId: string;
   public contrats = [];
+  public clicked_item = -1;
   constructor(private router: Router, private activatedRoute: ActivatedRoute, private contratService: ContratService) { }
 
   ngOnInit() {
@@ -24,6 +25,9 @@ export class BankDetailPage implements OnInit {
 
   showContrat() {
       this.contrats = this.bank.contrats;
+  }
+  show_details(i: number) {
+    this.clicked_item = i;
   }
 
 }

@@ -9,20 +9,18 @@
 
 <ion-content>
   <ion-row class="test">
-    <ion-col>
+    <ion-col size="6">
       <ion-text class="text"> {{bank.quantity}} </ion-text>
     </ion-col>
-    <ion-col class="spacer"></ion-col>
-    <ion-col>
+    <ion-col size="6" class="right-text">
       <ion-label class="label">كمية الإعتماد</ion-label>
     </ion-col>
   </ion-row>
   <ion-row class="test">
-    <ion-col>
+    <ion-col size="6">
       <ion-text class="text">{{bank.remainingQuantity}}</ion-text>
     </ion-col>
-    <ion-col class="spacer"></ion-col>
-    <ion-col>
+    <ion-col size="6" class="right-text">
       <ion-label class="label">الكمية المتبقية</ion-label>
     </ion-col>
   </ion-row>
@@ -55,8 +53,8 @@
     </ion-col>
 
     <ion-col size="12" class="array" *ngIf="contrats.length > 0">
-      <ion-grid *ngFor="let contrat of contrats">
-        <ion-row class="row-data">
+      <ion-grid *ngFor="let contrat of contrats; index as i;">
+        <ion-row class="row-data" (click)="show_details(i)" [ngClass]="(clicked_item === i )?'blue-row-data':'row-data'">
           <ion-col>
             <div> {{contrat.used}} </div>
           </ion-col>
@@ -67,6 +65,34 @@
             <div>{{contrat.name}}</div>
           </ion-col>
         </ion-row>
+        <div *ngIf="clicked_item === i">
+          <ion-grid>
+        <ion-row>
+          <ion-col size="4">
+            <div class="contract-info">المستعمل</div>
+          </ion-col>
+          <ion-col size="4">
+            <div class="contract-info">الكمية</div>
+          </ion-col>
+          <ion-col size="4">
+            <div class="contract-info">العقد</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+        <div *ngFor="let products of contrat.products;">
+         <ion-row class="row-details-data">
+         <ion-col>
+            <div> {{contrat.used}} </div>
+          </ion-col>
+          <ion-col>
+            <div> {{contrat.quantity}}</div>
+          </ion-col>
+          <ion-col>
+            <div>{{contrat.name}}</div>
+          </ion-col>
+        </ion-row>
+        </div>
+        </div>
       </ion-grid>
     </ion-col>
   </ion-row>
