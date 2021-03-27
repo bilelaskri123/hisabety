@@ -50,3 +50,27 @@ ion-select::part(icon) {
 h3 {
     text-align: center;
 }
+.test{
+border: 1px solid #E9E9E9;
+    box-shadow: 0px 0.728155px 3.64078px rgb(18 34 97 / 10%);
+    border-radius: 5.82524px;
+    width: 94%;
+    margin: auto;
+    margin-bottom: 8px;
+}
+.contract-info {
+  color: rgba(18, 34, 97, 0.5);
+}
+.row-data {
+  background: #FFFFFF;
+  box-shadow: 0px 1px 5px rgb(18 34 97 / 10%);
+  border-radius: 8px;
+  height: 60px;
+  padding-top: 10px;
+}
+.search-btn {
+  width: 94%;
+  margin: auto;
+  height: 43px;
+  margin-bottom: 20px;
+}

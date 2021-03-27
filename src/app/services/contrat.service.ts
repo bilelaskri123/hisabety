@@ -1023,4 +1023,7 @@ export class ContratService {
     ];
     constructor() {
     }
+    getContracts() {
+      return this.contrats;
+    }
 }

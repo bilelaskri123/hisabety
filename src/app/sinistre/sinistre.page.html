@@ -13,14 +13,14 @@
 <ion-content>
   <ion-searchbar placeholder="البحث  عن الاعتمادات و العقود" showCancelButton="focus"></ion-searchbar>
 
-  <ion-item >
+  <ion-item class="test">
     <ion-icon name="chevron-back-outline"></ion-icon>
     <ion-label slot="end">كمية الاعتمادات</ion-label>
     <ion-select cancelText="Nah" okText="Okay!">
     </ion-select>
   </ion-item>
 
-  <ion-item>
+  <ion-item class="test">
     <ion-icon name="chevron-back-outline"></ion-icon>
     <ion-label slot="end">الكمية المتبقية</ion-label>
     <ion-select cancelText="Nah" okText="Okay!">
@@ -28,7 +28,7 @@
     </ion-select>
   </ion-item>
 
-  <ion-button expand="block" color="primary" size="large">
+  <ion-button expand="block" class="search-btn" color="primary" size="large" (click)="onLoadData($event)">
     بحث
   </ion-button>
 
@@ -37,7 +37,7 @@
 
   </div>
 
-  <div>
+  <div *ngIf="contrats.length <= 0">
     <h3>يمكنك عرض كامل الاعتمادات والعقود المسجلة بشركة</h3>
   </div>
 
@@ -48,10 +48,10 @@
       <ion-grid>
         <ion-row>
           <ion-col size="6">
-            <div>العقود المرتبطة بها</div>
+            <div class="contract-info">العقود المرتبطة بها</div>
           </ion-col>
           <ion-col size="6">
-            <div>الاعتمادات</div>
+            <div class="contract-info">الاعتمادات</div>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -59,20 +59,15 @@
 
     <ion-col size="12" class="array" >
       <ion-grid *ngFor="let contrat of contrats" >
-            <ion-row  (click)="showBankDetail(contrat.id)">
+            <ion-row  (click)="showBankDetail(contrat.id)" class="row-data">
               <ion-col>
                 <div>
-                  {{contrat.type}}
+                  {{contrat.contratName}}
                 </div>
               </ion-col>
               <ion-col>
                 <div>
-                   {{contrat.price}}
-                </div>
-              </ion-col>
-              <ion-col>
-                <div class="name">
-                  {{contrat.bankName}}
+                   {{contrat.appropriationName}}
                 </div>
               </ion-col>
             </ion-row>
