@@ -1026,4 +1026,8 @@ export class ContratService {
     getContracts() {
       return this.contrats;
     }
+
+    getContractById(id: string) {
+        return this.contrats.filter(contract => contract.id == id);
+    }
 }

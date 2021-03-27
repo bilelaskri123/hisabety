@@ -8,79 +8,63 @@
 </ion-header>
 
 <ion-content>
-  <ion-row>
-    <ion-col size="6"></ion-col>
-    <ion-col size="3">
-      <ion-text> {{bank.bankName}} </ion-text>
-    </ion-col>
-    <ion-col size="3">
-      <ion-label>: البنك</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col size="6"></ion-col>
-    <ion-col size="3">
-      <ion-text > {{bank.price}} </ion-text>
-    </ion-col>
+  <ion-row class="test">
     <ion-col>
-      <ion-label size="3"></ion-label>
-      <ion-label>: الرصيد</ion-label>
+      <ion-text class="text"> {{bank.quantity}} </ion-text>
+    </ion-col>
+    <ion-col class="spacer"></ion-col>
+    <ion-col>
+      <ion-label class="label">كمية الإعتماد</ion-label>
     </ion-col>
   </ion-row>
-  <ion-row>
-    <ion-col size="4">
-      <ion-button class="btn" color="light" expand="block" fill="outline"
-        >عرض</ion-button
-      >
+  <ion-row class="test">
+    <ion-col>
+      <ion-text class="text">{{bank.remainingQuantity}}</ion-text>
     </ion-col>
-    <ion-col size="2" style="margin-top: 0.3rem">
-      <ion-input type="date"></ion-input>
-    </ion-col>
-    <ion-col size="2" style="margin-top: 1rem">
-      <ion-label> :إلى</ion-label>
-    </ion-col>
-    <ion-col size="2" style="margin-top: 0.3rem">
-      <ion-input type="date"></ion-input>
-    </ion-col>
-    <ion-col size="2" style="margin-top: 1rem">
-      <ion-label> :من</ion-label>
+    <ion-col class="spacer"></ion-col>
+    <ion-col>
+      <ion-label class="label">الكمية المتبقية</ion-label>
     </ion-col>
   </ion-row>
 
+  <ion-button
+    class="search-btn"
+    color="light"
+    size="medium"
+    expand="block"
+    fill="outline"
+    (click)="showContrat()"
+    >كشف كميات العقود المستعملة</ion-button
+  >
 
-  <ion-row>
-    <ion-col
-      size="12"
-      class="array"
-      style="background-color: rgb(204, 200, 200); width: min-content"
-    >
+  <ion-row *ngIf="contrats.length > 0">
+    <ion-col size="12" class="array">
       <ion-grid>
         <ion-row>
-          <ion-col>
-            <div class="row-text">الرصيد</div>
+          <ion-col size="4">
+            <div class="contract-info">المستعمل</div>
           </ion-col>
-          <ion-col>
-            <div class="row-text">دائن</div>
+          <ion-col size="4">
+            <div class="contract-info">الكمية</div>
           </ion-col>
-          <ion-col>
-            <div class="row-text"> مدين </div>
+          <ion-col size="4">
+            <div class="contract-info">العقد</div>
           </ion-col>
         </ion-row>
       </ion-grid>
     </ion-col>
 
-
-    <ion-col size="12" class="array">
-      <ion-grid *ngFor="let facture of factures">
-        <ion-row >
+    <ion-col size="12" class="array" *ngIf="contrats.length > 0">
+      <ion-grid *ngFor="let contrat of contrats">
+        <ion-row class="row-data">
           <ion-col>
-            <div class="row-text">{{facture.price}}</div>
+            <div> {{contrat.used}} </div>
           </ion-col>
-          <ion-col style="color: green;">
-            <div class="row-text">{{facture.positive}}</div>
+          <ion-col>
+            <div> {{contrat.quantity}}</div>
           </ion-col>
-          <ion-col style="color: red;">
-            <div  class="row-text" >{{facture.negative}}</div>
+          <ion-col>
+            <div>{{contrat.name}}</div>
           </ion-col>
         </ion-row>
       </ion-grid>

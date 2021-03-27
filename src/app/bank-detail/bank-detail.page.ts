@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BankService } from '../services/bank.service';
+import { ContratService } from '../services/contrat.service';
 
 @Component({
   selector: 'app-bank-detail',
@@ -11,15 +12,18 @@ export class BankDetailPage implements OnInit {
 
   public bank;
   private bankId: string;
-  public factures;
-  constructor(private router: Router, private activatedRoute: ActivatedRoute, private bankService: BankService) { }
+  public contrats = [];
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, private contratService: ContratService) { }
 
   ngOnInit() {
     this.activatedRoute.paramMap.subscribe(params => {
       this.bankId = params.get('bankId');
-      this.bank = this.bankService.getBankById(this.bankId)[0];
-      this.factures = this.bank.factures;
+      this.bank = this.contratService.getContractById(this.bankId)[0];
     })
+  }
+
+  showContrat() {
+      this.contrats = this.bank.contrats;
   }
 
 }
