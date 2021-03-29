@@ -27,9 +27,17 @@ ion-col.menu-logo.ios.hydrated {
   margin-bottom: 5%;
 }
 
-.inner-item{
+.inner-item {
   border: 1px solid #ffffff !important;
 }
 .menu-items{
   --border-style: auto;
+}
+
+.item-detail-icon {
+  display: none  !important;
+}
+
+.menu-list.item-native.item-inner{
+  display:none;
 }
