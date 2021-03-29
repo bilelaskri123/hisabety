@@ -10,7 +10,7 @@ export class CategoriesService {
       id: '1',
       stockName: 'المخزن الرئيسي',
       categoryName: 'أرز 1 ك',
-      categoryNumber: 3,
+      categoryNumber: "31/03/2021",
       quantity: 232,
       factures: [
         {
@@ -43,7 +43,7 @@ export class CategoriesService {
       id: '2',
       stockName: 'المخزن الرئيسي',
       categoryName: 'بيبسي 1 لتر',
-      categoryNumber: 5,
+      categoryNumber: "31/03/2021",
       quantity: 546,
       factures: [
         {
@@ -76,7 +76,7 @@ export class CategoriesService {
       id: '3',
       stockName: 'مخزن الشرق',
       categoryName: 'برميلي',
-      categoryNumber: 2,
+      categoryNumber: "31/03/2021",
       quantity: 122,
       factures: [
         {
@@ -109,7 +109,7 @@ export class CategoriesService {
       id: '4',
       stockName: 'المخزن الرئيسي',
       categoryName: 'زيتون',
-      categoryNumber: 7,
+      categoryNumber: "31/03/2021",
       quantity: 324,
       factures: [
         {

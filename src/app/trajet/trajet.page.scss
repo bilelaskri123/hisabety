@@ -135,7 +135,11 @@ ion-button:hover {
     color: #000000;
 }
 .filter-img {
-  padding-top: 15%;
+  padding-top: 25%;
+  width: 50%;
+  display: flex;
+  float: right;
+  margin: auto;
 }
 
 
@@ -191,6 +195,8 @@ ion-list {
 .top-content {
   background-color: #ffffff;
   padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .bottom-content {
   background-color: #FAFAFA;
@@ -204,6 +210,7 @@ ion-list {
   color: #000000;
   box-shadow: 0px 0.728155px 3.64078px rgba(18, 34, 97, 0.1);
   border-radius: 5.82524px;
+  font-size: 12px;
 }
 
 .clicked-input,.clicked-output,.clicked-details,.clicked {
@@ -237,4 +244,23 @@ font-size: 18px;
   height: 60%;
   width: 60%;
   margin: auto;
+}
+.array-header{
+font-size: 12px;
+line-height: 14px;
+text-align: right;
+text-transform: uppercase;
+
+color: rgba(18, 34, 97, 0.5);
+}
+.product-row {
+font-size: 12px;
+line-height: 14px;
+text-align: right;
+text-transform: uppercase;
+color: #000000;
+}
+.products-grid{
+  height:60px;
+  margin-bottom: 7px;
 }

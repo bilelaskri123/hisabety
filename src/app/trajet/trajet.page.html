@@ -75,31 +75,31 @@
       class="array store-array-header"
     >
       <ion-grid>
-        <ion-row>
+        <ion-row class="array-header">
           <ion-col>
-            <div>الكمية</div>
+            الوارد
           </ion-col>
           <ion-col>
-            <div>رقم القطعة</div>
+             الصنف
           </ion-col>
           <ion-col>
-            <div>الصنف</div>
+            التاريخ
           </ion-col>
         </ion-row>
       </ion-grid>
     </ion-col>
 
     <ion-col size="12" class="array" *ngIf="listFiltred.length > 0">
-      <ion-grid *ngFor="let category of listFiltred">
-        <ion-row [routerLink]="['/category-detail', category.id]" class="product-row">
-          <ion-col style="color: green">
+      <ion-grid *ngFor="let category of listFiltred" class="products-grid">
+        <ion-row  class="product-row">
+          <ion-col >
             <div>{{category.quantity}}</div>
           </ion-col>
           <ion-col>
-            <div>{{category.categoryNumber}}</div>
+            <div> {{category.categoryName}} </div>
           </ion-col>
           <ion-col>
-            <div class="name">{{category.categoryName}}</div>
+            <div class="name"> {{category.categoryNumber}} </div>
           </ion-col>
         </ion-row>
       </ion-grid>
